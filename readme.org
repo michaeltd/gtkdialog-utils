@@ -1,0 +1,14 @@
+#+title: gtkrm
+#+author: michaeltd
+#+date: <2019-10-28 Mon>
+
+* gtkrm
+
+gtkdialog Root Menu
+Utility to handle desktop switching, volume haldling, application launching.
+
+** Requirements
+
+ 1. gtkdialog
+
+ 2. xdotool

@@ -4,8 +4,6 @@ declare GTKDIALOG=$(which gtkdialog)
 
 IMAGEFILE="`find /usr/share/pixmaps -maxdepth 1 -type f | head -1`"
 
-
-
 export MAIN_DIALOG='
 <window>
   <vbox>
