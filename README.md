@@ -1,2 +1,0 @@
-# gtkrm
-gtkdialog Root Menu
