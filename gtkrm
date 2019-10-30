@@ -43,7 +43,6 @@
       <hscale space-expand="true" range-min="0" range-max="100" range-step="2" range-value="75" value-pos="0" digits="0" inverted="false">
       <variable export="true">hscaleVol</variable>
       <action>vol $hscaleVol</action>
-      <input>source ~/.bashrc.d/.stdl/string.sh;digits_only `vol report`</input>
       </hscale>
     </hbox>
   </vbox>
