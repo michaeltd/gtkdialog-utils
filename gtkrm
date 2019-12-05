@@ -40,9 +40,9 @@
       <button space-expand="true"><label>Right</label><action>xdotool key 'Super_L+Right'</action></button>
     </hbox>
     <hbox space-fill="true">
-      <hscale space-expand="true" range-min="0" range-max="100" range-step="2" range-value="75" value-pos="0" digits="0" inverted="false">
+      <hscale space-expand="true" range-min="0" range-max="100" range-step="2" range-value="100" value-pos="0" digits="0" inverted="false">
       <variable export="true">hscaleVol</variable>
-      <action>vol $hscaleVol</action>
+      <action>~/bin/sndvol $hscaleVol</action>
       </hscale>
     </hbox>
   </vbox>

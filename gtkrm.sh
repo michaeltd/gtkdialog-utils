@@ -1,8 +1,12 @@
-#!/bin/sh
+#!/bin/bash
 
-declare GTKDIALOG=$(which gtkdialog)
+declare GTKDIALOG="$(command -v gtkdialog)"
 
 IMAGEFILE="`find /usr/share/pixmaps -maxdepth 1 -type f | head -1`"
+
+. ~/.bashrc.d/.stl/string.sh
+
+cvol="$(digits_only "$(~/bin/sndvol report 2>&1)")"
 
 export MAIN_DIALOG='
 <window>
@@ -45,16 +49,12 @@ export MAIN_DIALOG='
       <button space-expand="true"><label>Right</label><action>xdotool key 'Super_L+Right'</action></button>
     </hbox>
     <hbox space-fill="true">
-      <hscale space-expand="true" range-min="0" range-max="100" range-step="2" value-pos="0" digits="0" inverted="false">
-      <variable export="true">hscaleVol</variable>
-      <action>vol $hscaleVol</action>
-      </hscale>
+      <hscale space-expand="true" range-min="0" range-max="100" range-step="2" range-value="'"${cvol}"'" value-pos="0" digits="0" inverted="false"> <variable export="true">hscaleVol</variable><action>~/bin/sndvol $hscaleVol</action></hscale>
     </hbox>
   </vbox>
-</window>
-'
+</window>'
 
-case $1 in
-    -d | --dump) echo "$MAIN_DIALOG" ;;
-    *) $GTKDIALOG --program=MAIN_DIALOG --geometry=+32+32;;
+case "${1}" in
+    -d | --dump) echo "${MAIN_DIALOG}" ;;
+    *) "${GTKDIALOG}" --program=MAIN_DIALOG --geometry=+64+64;;
 esac
