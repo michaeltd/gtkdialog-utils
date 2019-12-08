@@ -5,6 +5,7 @@
 * Description
 
 gtkdialog Root Menu
+
 Utility to handle desktop switching, volume haldling, application launching.
 
 * Requirements
@@ -12,3 +13,5 @@ Utility to handle desktop switching, volume haldling, application launching.
  1. gtkdialog
 
  2. xdotool
+
+ 3. [[https://github.com/michaeltd/dots/blob/master/dot.files/bin/sndvol][sndvol]] somewhere in $PATH
