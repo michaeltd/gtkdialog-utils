@@ -1,4 +1,4 @@
-#!/usr/bin/gtkdialog --geometry=+32+32 -f 
+#!/usr/bin/gtkdialog --geometry=+64+64 -f 
 
 <window>
 <vbox>
@@ -30,7 +30,7 @@
 <button space-expand="true"><label>Right</label><action>xdotool key 'Super_L+Right'</action></button>
 </hbox>
 <hbox space-fill="true">
-<hscale space-expand="true" range-min="0" range-max="100" range-step="2" range-value="100" value-pos="0" digits="0" inverted="false">
+<hscale space-expand="true" range-min="0" range-max="100" range-step="5" range-value="100" value-pos="0" digits="0" inverted="false">
 <variable export="true">hscalevol</variable>
 <action>~/bin/sndvol ${hscalevol}</action>
 </hscale>

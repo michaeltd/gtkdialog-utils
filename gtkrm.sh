@@ -2,11 +2,11 @@
 
 declare GTKDIALOG="$(command -v gtkdialog)"
 
-. ~/.bashrc.d/.stl/string.sh
+digits_only() {
+    echo "${*//[![:digit:]]}"
+}
 
 export hscalevol="$(digits_only "$(~/bin/sndvol report 2>&1)")"
-
-#export MAIN_DIALOG="$(cat ~/git/gtkrm/gtkrm.xml)"
 
 export MAIN_DIALOG='
 <window>
@@ -39,7 +39,7 @@ export MAIN_DIALOG='
 <button space-expand="true"><label>Right</label><action>xdotool key 'Super_L+Right'</action></button>
 </hbox>
 <hbox space-fill="true">
-<hscale space-expand="true" range-min="0" range-max="100" range-step="2" range-value="'"${hscalevol}"'" value-pos="0" digits="0" inverted="false">
+<hscale space-expand="true" range-min="0" range-max="100" range-step="5" range-value="'"${hscalevol}"'" value-pos="0" digits="0" inverted="false">
 <variable export="true">hscalevol</variable>
 <action>~/bin/sndvol ${hscalevol}</action>
 </hscale>

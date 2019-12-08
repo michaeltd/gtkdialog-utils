@@ -14,4 +14,4 @@ Utility to handle desktop switching, volume haldling, application launching.
 
  2. xdotool
 
- 3. [[https://github.com/michaeltd/dots/blob/master/dot.files/bin/sndvol][sndvol]] somewhere in $PATH
+ 3. [[https://github.com/michaeltd/dots/blob/master/dot.files/bin/sndvol][sndvol]]
