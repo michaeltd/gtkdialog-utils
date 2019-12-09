@@ -8,12 +8,11 @@ digits_only() {
 
 export hscalevol="$(digits_only "$(~/bin/sndvol report 2>&1)")"
 
-
 export ABOUT_DIALOG='
 <window title="README" icon-name="gtk-about" window-position="2" default-width="600" default-height="400" resizable="true">
 	<vbox>
 		<edit name="entReadMe" editable="false" can-focus="false">
-			<input file>'"$(dirname "$(realpath "$(type -P gtkrm.sh 2> /dev/null)")")/readme.org"'</input>
+			<input file>'"$(dirname "$(realpath "$(type -P gtkrm.sh 2> /dev/null)")")/readme.md"'</input>
         </edit>
         <hseparator></hseparator>
         <hbox>
@@ -23,7 +22,6 @@ export ABOUT_DIALOG='
 		</hbox>
 	</vbox>
 </window>'
-
 
 export MAIN_DIALOG='
 <window>
@@ -38,9 +36,9 @@ export MAIN_DIALOG='
                              <menuitem stock-id="gtk-quit" accel-key="0x51" accel-mods="4"><action>exit:Quit</action></menuitem>
                        </menu>
                        <menu label="_Help" use-underline="true">
-                       <menuitem stock-id="gtk-about" label="About"><action>'"${GTKDIALOG} --program=ABOUT_DIALOG"'</action></menuitem>
+                             <menuitem stock-id="gtk-about" label="About"><action>'"${GTKDIALOG} --program=ABOUT_DIALOG"'</action></menuitem>
                        </menu>
-                       </menubar>
+              </menubar>
         </hbox>
         <hbox space-fill="true">
               <button space-expand="true"><label>Left</label><action>xdotool key "Super_L+Left"</action></button>
