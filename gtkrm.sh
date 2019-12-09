@@ -41,8 +41,8 @@ export MAIN_DIALOG='
               </menubar>
         </hbox>
         <hbox space-fill="true">
-              <button space-expand="true"><label>Left</label><action>xdotool key "Super_L+Left"</action></button>
-              <button space-expand="true"><label>Right</label><action>xdotool key "Super_L+Right"</action></button>
+              <button space-expand="true"><input file stock="gtk-go-back"></input><action>xdotool key "Super_L+Left"</action></button>
+              <button space-expand="true"><input file stock="gtk-go-forward"></input><action>xdotool key "Super_L+Right"</action></button>
         </hbox>
         <hbox space-fill="true">
               <hscale space-expand="true" range-min="0" range-max="100" range-step="5" range-value="'"${hscalevol}"'" value-pos="0" digits="0" inverted="false">
@@ -53,7 +53,7 @@ export MAIN_DIALOG='
         <hbox space-fill="true">
               <entry activates-default="true"><default>command</default><variable export="true">eRun</variable></entry>
               <button can-default="true" has-default="true" tooltip-text="can-default, has-default">
-                      <label>... Run!</label>
+                      <input file stock="gtk-execute"></input>
                       <variable>btnDefault</variable>
                       <action>${eRun} &</action>
               </button>
