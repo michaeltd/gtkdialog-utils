@@ -1,6 +1,6 @@
 #shellcheck disable=SC2016,SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 export MAIN_DIALOG='
-<window title="'$(basename ${BASH_SOURCE[0]})'">
+<window title="'$(basename ${BASH_SOURCE[1]})'">
 <vbox>
 <hbox space-fill="true">
 <menubar space-expand="true">

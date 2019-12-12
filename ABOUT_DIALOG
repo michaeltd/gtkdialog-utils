@@ -3,7 +3,7 @@ export ABOUT_DIALOG='
 <window title="README" icon-name="gtk-about" window-position="2" default-width="600" default-height="400" resizable="true">
 <vbox>
 <edit name="entReadMe" editable="false" can-focus="false">
-<input file>'"$(dirname "$(realpath "${BASH_SOURCE[0]}")")/readme.md"'</input>
+<input file>'"$(dirname "$(realpath "${BASH_SOURCE[1]}")")/readme.md"'</input>
 </edit>
 <hseparator></hseparator>
 <hbox>
