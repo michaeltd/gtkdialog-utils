@@ -1,14 +1,13 @@
 # gtkrm
 
-author: michaeltd
-
-date: <2019-10-28 Mon>
+michaeltd <2019-10-28 Mon>
 
 # Description
 
 gtkdialog Root Menu
 
-Utility to handle desktop switching, volume haldling, application launching.
+Utility to handle desktop switching,
+volume haldling, application launching.
 
 # Requirements
 
