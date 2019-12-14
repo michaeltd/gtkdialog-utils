@@ -1,0 +1,5 @@
+BR="firefox"
+ED="emacsclient -c"
+FM="xfe"
+TM="xterm"
+EXIT="Cancel"

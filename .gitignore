@@ -1,9 +1,9 @@
 *
 !license
 !readme.md
-!gtkrm.sh
+!gtkrm.bash
 !ABOUT_DIALOG
 !MAIN_DIALOG
 !OPTIONS_DIALOG
-!gtkrm.sh.rc
+!gtkrm.bash.rc
 !assets/grm.png
