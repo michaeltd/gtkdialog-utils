@@ -1,15 +1,21 @@
 #shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 export ABOUT_DIALOG='
-<window title="README" icon-name="gtk-about" window-position="2" default-width="600" default-height="400" resizable="true">
-<vbox>
-<edit name="entReadMe" editable="false" can-focus="false">
-<input file>'"$(dirname "$(realpath "${BASH_SOURCE[1]}")")/readme.md"'</input>
-</edit>
-<hseparator></hseparator>
-<hbox>
-<button use-stock="true" label="gtk-ok" is-focus="true" width-request="90">
-<action>exit:Quit</action>
-</button>
-</hbox>
+<window title="About" icon-name="gtk-about" window-position="2" default-width="300" default-height="150" resizable="true">
+<vbox space-expand="true" space-fill="true">
+<text wrap="false" xalign="0.5">
+<label>'$(basename ${BASH_SOURCE[1]})'</label>
+</text>
+<text wrap="false" xalign="0.5">
+<label>https://github.com/michaeltd/gtkrm/</label>
+</text>
+<text wrap="false" xalign="0">
+<label>But... WHY?</label>
+</text>
+<text wrap="false" xalign="1">
+<label>coz... reasons!</label>
+</text>
+<button ok></button>
 </vbox>
 </window>'
+
+
