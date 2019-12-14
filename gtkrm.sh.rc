@@ -1,5 +1,5 @@
 BR="firefox"
 ED="emacsclient -c"
-FM="gentoo"
-TM="terminology"
-EXIT="OK"
+FM="xfe"
+TM="xterm"
+EXIT="Cancel"
