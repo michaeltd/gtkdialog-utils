@@ -9,6 +9,10 @@ gtkdialog Root Menu
 Utility to handle desktop switching,
 volume haldling, application launching.
 
+# Screenshot
+
+<p align="center"><a href="assets/grm.png"><img width="200" alt="compiz" src="assets/grm.png"></a></p>
+
 # Requirements
 
 1. gtkdialog
