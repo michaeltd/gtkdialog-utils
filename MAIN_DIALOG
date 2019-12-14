@@ -5,17 +5,17 @@ export MAIN_DIALOG='
 <hbox space-fill="true">
 <menubar space-expand="true">
 <menu label="_File" use-underline="true">
-<menuitem><label>browser</label><action>'"${BR} &"'</action></menuitem>
-<menuitem><label>editor</label><action>'"${ED} &"'</action></menuitem>
-<menuitem><label>file manager</label><action>'"${FM} &"'</action></menuitem>
-<menuitem><label>terminal</label><action>'"${TM} &"'</action></menuitem>
+<menuitem><label>browser</label><action>${BR} &</action></menuitem>
+<menuitem><label>editor</label><action>${ED} &</action></menuitem>
+<menuitem><label>file manager</label><action>${FM} &</action></menuitem>
+<menuitem><label>terminal</label><action>${TM} &</action></menuitem>
 <menuitem stock-id="gtk-quit" accel-key="0x51" accel-mods="4"><action>exit:Quit</action></menuitem>
 </menu>
 <menu label="_Help" use-underline="true">
 <menuitem label="Options">
-<action>'"${GTKDIALOG} --program=OPTIONS_DIALOG 1> ${rcfile}"'</action>
+<action>${GTKDIALOG} --program=OPTIONS_DIALOG 1> ${rcfile}</action>
 </menuitem>
-<menuitem stock-id="gtk-about" label="About"><action>'"${GTKDIALOG} --program=ABOUT_DIALOG"'</action></menuitem>
+<menuitem stock-id="gtk-about" label="About"><action>${GTKDIALOG} --program=ABOUT_DIALOG</action></menuitem>
 </menu>
 </menubar>
 </hbox>
@@ -29,17 +29,17 @@ export MAIN_DIALOG='
 <action>~/bin/sndvol ${hscalevol}</action>
 </hscale>
 </hbox>
-<hbox space-fill="true">
-			<terminal has-focus="false" argv0="/bin/tcsh" current-directory-uri="'$HOME'" hscrollbar-policy="2" vscrollbar-policy="2">
-                <height>1</height>
-                <width>20</width>
-				<variable>vte0</variable>
-				<action>echo "vte0=$vte0 - Default child-exited signal"</action>
-				<action signal="child-exited">echo "vte0=$vte0 - Resetting and re-executing command"</action>
-				<action signal="child-exited">clear:vte0</action>
-				<action signal="child-exited">echo "vte0=$vte0 - New PID"</action>
-				<action signal="show">echo "vte0=$vte0 - show signal"</action>
-			</terminal>
+<hbox space-fill="false" space-expand="false">
+	<terminal has-focus="false" argv0="/bin/tcsh" current-directory-uri="'$HOME'" hscrollbar-policy="2" vscrollbar-policy="2">
+      <height>1</height>
+      <width>20</width>
+	  <variable>vte0</variable>
+	  <action>echo "vte0=$vte0 - Default child-exited signal"</action>
+	  <action signal="child-exited">echo "vte0=$vte0 - Resetting and re-executing command"</action>
+	  <action signal="child-exited">clear:vte0</action>
+	  <action signal="child-exited">echo "vte0=$vte0 - New PID"</action>
+	  <action signal="show">echo "vte0=$vte0 - show signal"</action>
+	</terminal>
 </hbox>
 </vbox>
 </window>'

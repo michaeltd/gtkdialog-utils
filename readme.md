@@ -11,7 +11,7 @@ volume haldling, application launching.
 
 # Screenshot
 
-<p align="center"><a href="assets/grm.png"><img alt="gtkrm.sh" src="assets/grm.png"></a></p>
+<p align="center"><a href="assets/grm.png"><img alt="gtkrm.bash" src="assets/grm.png"></a></p>
 
 # Requirements
 
