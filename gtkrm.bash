@@ -20,13 +20,13 @@ export rcfile="$(dirname $(realpath "${BASH_SOURCE[0]}"))/$(basename "${BASH_SOU
 
 source "${rcfile}"
 
-source "$(dirname "$(realpath "${BASH_SOURCE[0]}")")/ABOUT_DIALOG"
+source "$(dirname "$(realpath "${BASH_SOURCE[0]}")")/ABOUT"
 
-source "$(dirname "$(realpath "${BASH_SOURCE[0]}")")/OPTIONS_DIALOG"
+source "$(dirname "$(realpath "${BASH_SOURCE[0]}")")/OPTIONS"
 
-source "$(dirname "$(realpath "${BASH_SOURCE[0]}")")/MAIN_DIALOG"
+source "$(dirname "$(realpath "${BASH_SOURCE[0]}")")/MAIN"
 
 case "${1}" in
     -d | --dump) echo "${MAIN_DIALOG}";;
-    *) "${GTKDIALOG}" --program=MAIN_DIALOG --geometry=+64+64;;
+    *) "${GTKDIALOG}" --program=MAIN --geometry=+64+64;;
 esac
