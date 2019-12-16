@@ -15,8 +15,12 @@ volume haldling, application launching.
 
 # Requirements
 
-1. gtkdialog
+1. gtkdialog (vte enabled)
 
 2. xdotool
 
 3. [sndvol](https://github.com/michaeltd/dots/blob/master/dot.files/bin/sndvol)
+   in ~/bin/sndvol
+
+4. [string.sh](https://github.com/michaeltd/dots/blob/master/dot.files/.bashrc.d/.stl/string.sh)
+   in ~/.bashrc.d/.stl/string.sh
