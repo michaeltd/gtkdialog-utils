@@ -1,6 +1,6 @@
 #shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 export OPTIONS='
-<window title="Options" window-position="2" resizable="true">
+<window title="Options" resizable="true">
   <frame Options>
 	<vbox>
 		<hbox>

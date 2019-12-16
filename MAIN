@@ -13,9 +13,9 @@ export MAIN='
   </menu>
   <menu label="_Help" use-underline="true">
     <menuitem label="Options">
-      <action>${GTKDIALOG} --program=OPTIONS 1> ${rcfile}</action>
+      <action>${GTKDIALOG} --center --program=OPTIONS 1> ${rcfile}</action>
     </menuitem>
-    <menuitem stock-id="gtk-about" label="About"><action>${GTKDIALOG} --program=ABOUT</action></menuitem>
+    <menuitem stock-id="gtk-about" label="About"><action>${GTKDIALOG} --center --program=ABOUT</action></menuitem>
   </menu>
 </menubar>
 </hbox>

@@ -1,6 +1,6 @@
 #shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 export ABOUT='
-<window title="About" icon-name="gtk-about" window-position="2" default-width="150" default-height="100" resizable="true" modal="true">
+<window title="About" icon-name="gtk-about" default-width="150" default-height="100" resizable="true" modal="true">
   <vbox space-expand="true" space-fill="true">
   <frame>
 	<text wrap="false" xalign="0" selectable="false">
