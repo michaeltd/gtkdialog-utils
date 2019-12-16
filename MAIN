@@ -1,3 +1,10 @@
+# <entry activates-default="true"><default>command</default><variable export="true">eRun</variable></entry>
+# <button can-default="true" has-default="true" tooltip-text="can-default, has-default">
+# <input file stock="gtk-execute"></input>
+# <variable>btnDefault</variable>
+# <action>${eRun} &</action>
+# </button>
+
 #shellcheck disable=SC2016,SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 export MAIN='
 <window title="'$(basename ${BASH_SOURCE[1]})'">
@@ -43,10 +50,3 @@ export MAIN='
 </hbox>
 </vbox>
 </window>'
-
-# <entry activates-default="true"><default>command</default><variable export="true">eRun</variable></entry>
-# <button can-default="true" has-default="true" tooltip-text="can-default, has-default">
-# <input file stock="gtk-execute"></input>
-# <variable>btnDefault</variable>
-# <action>${eRun} &</action>
-# </button>
