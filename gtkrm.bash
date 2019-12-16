@@ -26,5 +26,5 @@ source "$(dirname "$(realpath "${BASH_SOURCE[0]}")")/MAIN"
 
 case "${1}" in
     -d | --dump) echo "${MAIN}";;
-    *) "${GTKDIALOG}" --program=MAIN --geometry=+64+64;;
+    *) "${GTKDIALOG}" --program=MAIN --geometry=130x115+64+64;;
 esac
