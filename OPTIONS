@@ -32,6 +32,13 @@ export OPTIONS='
 			</entry>
 		</hbox>
 		<hbox>
+			<text><label>Shell:</label></text>
+			<entry>
+				<default>'"${SH}"'</default>
+				<variable export="true">SH</variable>
+			</entry>
+		</hbox>
+		<hbox>
 			<button can-default="true" has-default="true">
 				<label>OK</label>
 				<input file stock="gtk-ok"></input>

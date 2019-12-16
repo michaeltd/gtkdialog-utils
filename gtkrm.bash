@@ -7,16 +7,14 @@
 
 [[ -z "${GTKDIALOG}" ]] && echo "You need gtkdialog for this!" >&2 && exit 1
 
-digits_only() {
-    echo "${*//[![:digit:]]}"
-}
+source ~/.bashrc.d/.stl/string.sh
 
 #shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 export hscalevol="$(digits_only "$(~/bin/sndvol report 2>&1)")"
 #shellcheck disable=SC2034 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
-BR="firefox" ED="gvim" FM="doublecmd" TM="terminology"
+BR="firefox" ED="gvim" FM="doublecmd" TM="terminology" SH="/bin/tcsh"
 
-export rcfile="$(dirname $(realpath "${BASH_SOURCE[0]}"))/$(basename "${BASH_SOURCE[0]}").rc"
+export rcfile="$(dirname "$(realpath "${BASH_SOURCE[0]}")")/$(basename "${BASH_SOURCE[0]}").rc"
 
 source "${rcfile}"
 
