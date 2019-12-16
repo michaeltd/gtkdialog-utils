@@ -7,17 +7,25 @@
 
 #shellcheck disable=SC2016,SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 export MAIN='
-<window title="'$(basename ${BASH_SOURCE[1]})'">
+<window title="'$(basename ${BASH_SOURCE[1]})'" resizable="false">
 <vbox>
 <hbox space-fill="true">
 <menubar space-expand="true">
-  <menu label="_File" use-underline="true">
-    <menuitem><label>browser</label><action>'"${BR} &"'</action></menuitem>
-    <menuitem><label>editor</label><action>'"${ED} &"'</action></menuitem>
-    <menuitem><label>file manager</label><action>'"${FM} &"'</action></menuitem>
-    <menuitem><label>terminal</label><action>'"${TM} &"'</action></menuitem>
+  <menu label="_Application" use-underline="true">
+    <menuitem use-underline="true" label="_Browser" stock="gtk-home">
+      <action>'"${BR} &"'</action>
+    </menuitem>
+    <menuitem use-underline="true" label="_Editor" stock-id="gtk-edit">
+    <action>'"${ED} &"'</action>
+    </menuitem>
+    <menuitem use-underline="true" label="File _Manager" stock-id="gtk-directory">
+    <action>'"${FM} &"'</action>
+    </menuitem>
+    <menuitem use-underline="true" label="_Terminal" stock-id="gtk-harddisk">
+    <action>'"${TM} &"'</action>
+    </menuitem>
     <menuitem stock-id="gtk-quit" accel-key="0x51" accel-mods="4"><action>exit:Quit</action></menuitem>
-  </menu>
+    </menu>
   <menu label="_Help" use-underline="true">
     <menuitem label="Options">
       <action>${GTKDIALOG} --center --program=OPTIONS 1> ${rcfile}</action>
