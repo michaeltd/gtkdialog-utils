@@ -1,0 +1,133 @@
+#shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
+export CALC='
+<window title="Calculator" resizable="true">
+  <frame Calculator>
+  <vbox space-expand="true" space-fill="true" homogeneous="true">
+
+    <hbox>
+    <entry xalign="1" sensitive="true">
+      <default>""</default>
+      <input file>/tmp/.INPUT.txt</input>
+      <variable export="true">INPUT</variable>
+    </entry>
+    </hbox>
+    
+    <hbox visible="false">
+    <entry sensitive="true" visible="false">
+      <default>""</default>
+      <input file>/tmp/.MEM.txt</input>
+      <variable export="true">MEM</variable>
+    </entry>
+    </hbox>
+
+    <hbox homogeneous="true">
+    <button tooltip-text="AC" space-expand="true" space-fill="true" use-underline="true">
+      <action>echo "" > /tmp/.INPUT.txt</action>
+      <action function="refresh">INPUT</action>
+      <label>_AC</label>
+    </button>
+    <button tooltip-text="MS" space-expand="true" space-fill="true" use-underline="true">
+      <action>echo "${INPUT}" > /tmp/.MEM.txt</action>
+      <action function="refresh">MEM</action>
+      <label>M_S</label>
+    </button>
+    <button tooltip-text="MR" space-expand="true" space-fill="true" use-underline="true">
+      <action>echo "${INPUT}${MEM}" > /tmp/.INPUT.txt</action>
+      <action function="refresh">INPUT</action>
+      <label>M_R</label>
+    </button>
+    <button stock-id="gtk-quit" stock-image="gtk-quit" space-expand="true" space-fill="true" use-underline="true" label="_C"></button>
+    </hbox>
+
+    <hbox homogeneous="true">
+      <button tooltip-text="7" space-expand="true" space-fill="true" use-underline="true">
+        <action>echo "${INPUT}7" > /tmp/.INPUT.txt</action>
+        <action function="refresh">INPUT</action>
+        <label>_7</label>
+      </button>
+      <button tooltip-text="8" space-expand="true" space-fill="true" use-underline="true">
+        <action>echo "${INPUT}8" > /tmp/.INPUT.txt</action>
+        <action function="refresh">INPUT</action>
+        <label>_8</label>
+      </button>
+      <button tooltip-text="9" space-expand="true" space-fill="true" use-underline="true">
+        <action>echo "${INPUT}9" > /tmp/.INPUT.txt</action>
+        <action function="refresh">INPUT</action>
+        <label>_9</label>
+      </button>
+      <button tooltip-text="/" space-expand="true" space-fill="true" use-underline="true">
+        <action>echo "${INPUT}/" > /tmp/.INPUT.txt</action>
+        <action function="refresh">INPUT</action>
+        <label>_/</label>
+      </button>
+    </hbox>
+
+    <hbox homogeneous="true">
+    <button tooltip-text="4" space-expand="true" space-fill="true" use-underline="true">
+      <action>echo "${INPUT}4" > /tmp/.INPUT.txt</action>
+      <action function="refresh">INPUT</action>
+      <label>_4</label>
+    </button>
+    <button tooltip-text="5" space-expand="true" space-fill="true" use-underline="true">
+      <action>echo "${INPUT}5" > /tmp/.INPUT.txt</action>
+      <action function="refresh">INPUT</action>
+      <label>_5</label>
+    </button>
+    <button tooltip-text="6" space-expand="true" space-fill="true" use-underline="true">
+      <action>echo "${INPUT}6" > /tmp/.INPUT.txt</action>
+      <action function="refresh">INPUT</action>
+      <label>_6</label>
+    </button>
+    <button tooltip-text="*" space-expand="true" space-fill="true" use-underline="true">
+      <action>echo "${INPUT}*" > /tmp/.INPUT.txt</action>
+      <action function="refresh">INPUT</action>
+      <label>_*</label>
+    </button>
+    </hbox>
+    <hbox homogeneous="true">
+      <button tooltip-text="1" space-expand="true" space-fill="true" use-underline="true">
+      <action>echo "${INPUT}1" > /tmp/.INPUT.txt</action>
+      <action function="refresh">INPUT</action>
+      <label>_1</label>
+      </button>
+      <button tooltip-text="2" space-expand="true" space-fill="true" use-underline="true">
+        <action>echo "${INPUT}2" > /tmp/.INPUT.txt</action>
+        <action function="refresh">INPUT</action>
+        <label>_2</label>
+      </button>
+      <button tooltip-text="3" space-expand="true" space-fill="true" use-underline="true">
+        <action>echo "${INPUT}3" > /tmp/.INPUT.txt</action>
+        <action function="refresh">INPUT</action>
+        <label>_3</label>
+      </button>
+      <button tooltip-text="-" space-expand="true" space-fill="true" use-underline="true">
+        <action>echo "${INPUT}-" > /tmp/.INPUT.txt</action>
+        <action function="refresh">INPUT</action>
+        <label>_-</label>
+      </button>
+    </hbox>
+    <hbox homogeneous="true">
+      <button tooltip-text="0" space-expand="true" space-fill="true" use-underline="true">
+        <action>echo "${INPUT}0" > /tmp/.INPUT.txt</action>
+        <action function="refresh">INPUT</action>
+        <label>_0</label>
+      </button>
+      <button tooltip-text="." space-expand="true" space-fill="true" use-underline="true">
+        <action>echo "${INPUT}." > /tmp/.INPUT.txt</action>
+        <action function="refresh">INPUT</action>
+        <label>_.</label>
+      </button>
+      <button tooltip-text="=" space-expand="true" space-fill="true" use-underline="true">
+        <action>echo "scale=2;${INPUT}"|bc -l 1> /tmp/.INPUT.txt</action>
+        <action function="refresh">INPUT</action>
+        <label>_=</label>
+      </button>
+      <button tooltip-text="+" space-expand="true" space-fill="true" use-underline="true">
+        <action>echo "${INPUT}+" > /tmp/.INPUT.txt</action>
+        <action function="refresh">INPUT</action>
+        <label>_+</label>
+      </button>
+    </hbox>
+  </vbox>
+  </frame>
+</window>'

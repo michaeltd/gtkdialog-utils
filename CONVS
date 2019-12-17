@@ -1,0 +1,21 @@
+#shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
+export CONVS='
+<window title="Converters" resizable="true">
+  <notebook tab-labels="Distance|Speed|Mass|Temperature|Counting Systems">
+    <frame Distance>
+      <vbox><button ok></button></vbox>
+    </frame>
+    <frame Speed>
+      <vbox><button ok></button></vbox>
+    </frame>
+    <frame Mass>
+      <vbox><button ok></button></vbox>
+    </frame>
+    <frame Temperature>
+      <vbox><button ok></button></vbox>
+    </frame>
+    <frame Counting Systems>
+      <vbox><button ok></button></vbox>
+    </frame>
+  </notebook>
+</window>'
