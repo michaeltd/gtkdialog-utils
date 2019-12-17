@@ -1,9 +1,8 @@
 *
 !gtkrm.bash
-!gtkrm.bash.rc
 !ABOUT
 !MAIN
-!OPTIONS
+!OPTS
 !license
 !readme.md
 !assets/grm.png
