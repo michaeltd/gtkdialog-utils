@@ -1,8 +1,8 @@
-source "${HOME}/.bashrc.d/.stl/speed.sh"
+source "${HOME}/.bashrc.d/.stl/distance.bash"
 
-export -f kphtomph mphtokph
+export -f kmtoml mltokm kphtomph mphtokph
 
-source "${HOME}/.bashrc.d/.stl/temp.sh"
+source "${HOME}/.bashrc.d/.stl/temp.bash"
 
 export -f ctof ctok ktoc ktof ftoc ftok
 
@@ -11,7 +11,34 @@ export CONVS='
 <window title="Converters" resizable="true">
   <notebook tab-labels="Distance|Speed|Mass|Temperature|Counting Systems">
     <frame Distance>
-      <vbox><button ok></button></vbox>
+
+      <vbox>
+        <hbox>
+          <text label="ML"></text>
+          <entry>
+            <default>0</default>
+            <variable export="true">ML</variable>
+            <input>kphtomph ${KM} 2> /dev/null</input>
+          </entry>
+          <button>
+            <input file stock="gtk-go-forward"></input>
+            <action function="refresh">KM</action>
+          </button>
+        </hbox>
+        <hbox>
+          <text label="KM"></text>
+          <entry>
+            <default>0</default>
+            <variable export="true">KM</variable>
+            <input>mphtokph ${ML} 2> /dev/null</input>
+          </entry>
+          <button>
+            <input file stock="gtk-go-forward"></input>
+            <action function="refresh">ML</action>
+          </button>
+        </hbox>
+      </vbox>
+
     </frame>
     <frame Speed>
       <vbox>
@@ -22,7 +49,10 @@ export CONVS='
             <variable export="true">MPH</variable>
             <input>kphtomph ${KPH} 2> /dev/null</input>
           </entry>
-          <button><input file stock="gtk-go-forward"></input><action function="refresh">KPH</action></button>
+          <button>
+            <input file stock="gtk-go-forward"></input>
+            <action function="refresh">KPH</action>
+          </button>
         </hbox>
         <hbox>
           <text label="KPH"></text>
@@ -31,7 +61,10 @@ export CONVS='
             <variable export="true">KPH</variable>
             <input>mphtokph ${MPH} 2> /dev/null</input>
           </entry>
-          <button><input file stock="gtk-go-forward"></input><action function="refresh">MPH</action></button>
+          <button>
+            <input file stock="gtk-go-forward"></input>
+            <action function="refresh">MPH</action>
+          </button>
         </hbox>
       </vbox>
     </frame>
@@ -41,7 +74,7 @@ export CONVS='
     <frame Temperature>
       <vbox>
         <hbox>
-          <text label="Celcious"></text>
+          <text label="C"></text>
           <entry>
             <default>0</default>
             <variable export="true">C</variable>
@@ -54,7 +87,7 @@ export CONVS='
           </button>
         </hbox>
         <hbox>
-          <text label="Fahrenheit"></text>
+          <text label="F"></text>
           <entry>
             <default>0</default>
             <variable export="true">F</variable>
@@ -67,7 +100,7 @@ export CONVS='
           </button>
         </hbox>
         <hbox>
-          <text label="Kelvin"></text>
+          <text label="K"></text>
           <entry>
             <default>0</default>
             <variable export="true">K</variable>
