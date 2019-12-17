@@ -1,3 +1,11 @@
+source "${HOME}/.bashrc.d/.stl/speed.sh"
+
+export -f kphtomph mphtokph
+
+source "${HOME}/.bashrc.d/.stl/temp.sh"
+
+export -f ctof ctok ktoc ktof ftoc ftok
+
 #shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 export CONVS='
 <window title="Converters" resizable="true">
@@ -6,13 +14,72 @@ export CONVS='
       <vbox><button ok></button></vbox>
     </frame>
     <frame Speed>
-      <vbox><button ok></button></vbox>
+      <vbox>
+        <hbox>
+          <text label="MPH"></text>
+          <entry>
+            <default>0</default>
+            <variable export="true">MPH</variable>
+            <input>kphtomph ${KPH} 2> /dev/null</input>
+          </entry>
+          <button><input file stock="gtk-go-forward"></input><action function="refresh">KPH</action></button>
+        </hbox>
+        <hbox>
+          <text label="KPH"></text>
+          <entry>
+            <default>0</default>
+            <variable export="true">KPH</variable>
+            <input>mphtokph ${MPH} 2> /dev/null</input>
+          </entry>
+          <button><input file stock="gtk-go-forward"></input><action function="refresh">MPH</action></button>
+        </hbox>
+      </vbox>
     </frame>
     <frame Mass>
       <vbox><button ok></button></vbox>
     </frame>
     <frame Temperature>
-      <vbox><button ok></button></vbox>
+      <vbox>
+        <hbox>
+          <text label="Celcious"></text>
+          <entry>
+            <default>0</default>
+            <variable export="true">C</variable>
+            <input>ftoc ${F} 2> /dev/null</input>
+          </entry>
+          <button>
+            <input file stock="gtk-go-forward"></input>
+            <action function="refresh">F</action>
+            <action function="refresh">K</action>
+          </button>
+        </hbox>
+        <hbox>
+          <text label="Fahrenheit"></text>
+          <entry>
+            <default>0</default>
+            <variable export="true">F</variable>
+            <input>ctof ${C} 2> /dev/null</input>
+          </entry>
+          <button>
+            <input file stock="gtk-go-forward"></input>
+            <action function="refresh">C</action>
+            <action function="refresh">K</action>
+          </button>
+        </hbox>
+        <hbox>
+          <text label="Kelvin"></text>
+          <entry>
+            <default>0</default>
+            <variable export="true">K</variable>
+            <input>ctok ${C} 2> /dev/null</input>
+          </entry>
+          <button>
+            <input file stock="gtk-go-forward"></input>
+            <action function="refresh">C</action>
+            <action function="refresh">F</action>
+          </button>
+        </hbox>
+      </vbox>
     </frame>
     <frame Counting Systems>
       <vbox><button ok></button></vbox>

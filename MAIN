@@ -45,7 +45,7 @@ export MAIN='
       <hbox space-fill="true">
         <hscale space-expand="true" range-min="0" range-max="100" range-step="5" range-value="'${HSVOL}'" value-pos="0" digits="0" inverted="false" can-focus="false">
           <variable export="true">HSVOL</variable>
-          <action>~/bin/sndvol ${HSVOL}</action>
+          <action>~/bin/sndvol ${HSVOL} &</action>
         </hscale>
       </hbox>
       <hbox space-fill="true">
