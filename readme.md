@@ -1,17 +1,19 @@
-# gtkrm
+# gtkdutils
 
 michaeltd <2019-10-28 Mon>
 
 # Description
 
-gtkdialog Root Menu
+gtkdialog Utils
 
 Utility to handle desktop switching,
-volume haldling, application launching.
+volume haldling, application launching,
+plus some nifty tools just so I can
+fiddle with gtkdialog.
 
 # Screenshot
 
-<p align="center"><a href="assets/grm.png"><img alt="gtkrm.bash" src="assets/grm.png"></a></p>
+<p align="center"><a href="assets/gdu.png"><img alt="gtkdutils.bash" src="assets/gdu.png"></a></p>
 
 # Requirements
 

@@ -6,9 +6,8 @@
 !MAIN
 !OPTS
 !TODOS
-!assets/grm.png
 !assets/gdu.png
-!gtkutil.bash
 !gtkdialog_utils.bash
+!gtkdutils.bash
 !license
 !readme.md
