@@ -6,10 +6,8 @@ michaeltd <2019-10-28 Mon>
 
 gtkdialog Utils
 
-Utility to handle desktop switching,
-volume haldling, application launching,
-plus some nifty tools just so I can
-fiddle with gtkdialog.
+Utility to handle desktop switching, volume haldling, application launching,
+plus some nifty tools just so I can fiddle with gtkdialog.
 
 # Screenshot
 
