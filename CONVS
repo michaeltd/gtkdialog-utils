@@ -1,5 +1,5 @@
 source "${HOME}/.bashrc.d/.stl/distance.bash"
-export -f kmtoml mltokm kphtomph mphtokph
+export -f kmtoml mltokm
 
 source "${HOME}/.bashrc.d/.stl/temp.bash"
 export -f ctof ctok ktoc ktof ftoc ftok
@@ -7,16 +7,15 @@ export -f ctof ctok ktoc ktof ftoc ftok
 #shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 export CONVS='
 <window title="Converters" resizable="true">
-  <notebook tab-labels="Distance|Speed|Mass|Temperature|Counting Systems">
-    <frame Distance>
-
+  <notebook tab-labels="Distance/Speed|Mass|Temperature|Counting Systems">
+    <frame Distance/Speed>
       <vbox>
         <hbox>
-          <text label="ML"></text>
+          <text label="ML/MPH"></text>
           <entry>
             <default>0</default>
             <variable export="true">ML</variable>
-            <input>kphtomph ${KM} 2> /dev/null</input>
+            <input>kmtoml ${KM} 2> /dev/null</input>
           </entry>
           <button>
             <input file stock="gtk-go-forward"></input>
@@ -24,44 +23,15 @@ export CONVS='
           </button>
         </hbox>
         <hbox>
-          <text label="KM"></text>
+          <text label="KM/KPH"></text>
           <entry>
             <default>0</default>
             <variable export="true">KM</variable>
-            <input>mphtokph ${ML} 2> /dev/null</input>
+            <input>mltokm ${ML} 2> /dev/null</input>
           </entry>
           <button>
             <input file stock="gtk-go-forward"></input>
             <action function="refresh">ML</action>
-          </button>
-        </hbox>
-      </vbox>
-
-    </frame>
-    <frame Speed>
-      <vbox>
-        <hbox>
-          <text label="MPH"></text>
-          <entry>
-            <default>0</default>
-            <variable export="true">MPH</variable>
-            <input>kphtomph ${KPH} 2> /dev/null</input>
-          </entry>
-          <button>
-            <input file stock="gtk-go-forward"></input>
-            <action function="refresh">KPH</action>
-          </button>
-        </hbox>
-        <hbox>
-          <text label="KPH"></text>
-          <entry>
-            <default>0</default>
-            <variable export="true">KPH</variable>
-            <input>mphtokph ${MPH} 2> /dev/null</input>
-          </entry>
-          <button>
-            <input file stock="gtk-go-forward"></input>
-            <action function="refresh">MPH</action>
           </button>
         </hbox>
       </vbox>

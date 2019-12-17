@@ -16,5 +16,5 @@ source "$(dirname "$(realpath "${BASH_SOURCE[0]}")")/CONVS"
 
 case "${1}" in
     -d | --dump) echo "${MAIN} ${ABOUT} ${OPTS} ${CALC} ${TODOS} ${FIND} ${CONVS}";;
-    *) "${GTKDIALOG}" --program=MAIN --geometry='170x115+64+64';;
+    *) "${GTKDIALOG}" --program=MAIN --geometry='+64+64';;
 esac

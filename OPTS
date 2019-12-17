@@ -2,42 +2,32 @@
 export OPTS='
 <window title="Options" resizable="true">
   <frame Options>
-	<vbox>
-		<hbox>
-			<text><label>Browser:</label></text>
-			<entry><default>'"${BR}"'</default><variable export="true">BR</variable></entry>
-		</hbox>
-		<hbox>
-			<text><label>Editor:</label></text>
-			<entry><default>'"${ED}"'</default><variable export="true">ED</variable></entry>
-		</hbox>
-		<hbox>
-			<text><label>File Manager:</label></text>
-			<entry><default>'"${FM}"'</default><variable export="true">FM</variable></entry>
-		</hbox>
-		<hbox>
-			<text><label>Terminal:</label></text>
-			<entry><default>'"${TM}"'</default><variable export="true">TM</variable></entry>
-		</hbox>
-		<hbox>
-			<text><label>Shell:</label></text>
-			<entry><default>'"${SH}"'</default><variable export="true">SH</variable></entry>
-		</hbox>
-		<hbox>
-			<text><label>Go Left:</label></text>
-			<entry><default>'"${GL}"'</default><variable export="true">GL</variable></entry>
-		</hbox>
-		<hbox>
-			<text><label>Go Right:</label></text>
-			<entry><default>'"${GR}"'</default><variable export="true">GR</variable></entry>
-		</hbox>
-		<hbox>
-			<button can-default="true" has-default="true">
-				<label>OK</label>
-				<input file stock="gtk-ok"></input>
-			</button>
-			<button cancel></button>
-		</hbox>
-	</vbox>
-    </frame>
+    <hbox>
+      <vbox homogeneous="true">
+        <text xalign="1"><label>Browser:</label></text>
+	    <text xalign="1"><label>Editor:</label></text>
+	    <text xalign="1"><label>File Manager:</label></text>
+	    <text xalign="1"><label>Terminal:</label></text>
+	    <text xalign="1"><label>Shell:</label></text>
+	    <text xalign="1"><label>Go Left:</label></text>
+	    <text xalign="1"><label>Go Right:</label></text>
+	  </vbox>
+	  <vbox homogeneous="true">
+        <entry><default>'"${BR}"'</default><variable export="true">BR</variable></entry>
+	    <entry><default>'"${ED}"'</default><variable export="true">ED</variable></entry>
+	    <entry><default>'"${FM}"'</default><variable export="true">FM</variable></entry>
+	    <entry><default>'"${TM}"'</default><variable export="true">TM</variable></entry>
+	    <entry><default>'"${SH}"'</default><variable export="true">SH</variable></entry>
+	    <entry><default>'"${GL}"'</default><variable export="true">GL</variable></entry>
+	    <entry><default>'"${GR}"'</default><variable export="true">GR</variable></entry>
+	  </vbox>
+    </hbox>
+	<hbox>
+	  <button can-default="true" has-default="true">
+		<label>OK</label>
+		<input file stock="gtk-ok"></input>
+	  </button>
+	  <button cancel></button>
+	</hbox>
+  </frame>
 </window>'
