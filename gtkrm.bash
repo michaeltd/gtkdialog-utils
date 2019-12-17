@@ -11,8 +11,12 @@ source ~/.bashrc.d/.stl/string.sh
 export hscalevol="$(digits_only "$(~/bin/sndvol report 2>&1)")"
 
 #shellcheck disable=SC2034 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
-BR="firefox" ED="gvim" FM="doublecmd" TM="terminology" SH="/bin/tcsh" \
-GL="Super_L+Left" GR="Super_L+Right"
+BR="$(type -P chrome||type -P firefox||type -P firefox-esr||type -P seamonkey)" \
+  ED="$(type -P gedit||type -P kate||type -P mousepad||type -P gvim)" \
+  FM="$(type -P nautilus||type -P thunar||type -P xfe||type -P doublecmd)" \
+  TM="$(type -P gnome-terminal||type -P konsole||type -P xfce4-terminal||type -P terminology)" \
+  SH="$(type -P yash||type -P dash||type -P ksh||type -P sh)" \
+  GL="Super_L+Left" GR="Super_L+Right"
 export rcfile="${HOME}/.$(basename "${BASH_SOURCE[0]}").rc"
 source "${rcfile}"
 
