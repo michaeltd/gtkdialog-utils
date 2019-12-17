@@ -11,15 +11,16 @@ source ~/.bashrc.d/.stl/string.sh
 export hscalevol="$(digits_only "$(~/bin/sndvol report 2>&1)")"
 
 #shellcheck disable=SC2034 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
-BR="firefox" ED="gvim" FM="doublecmd" TM="terminology" SH="/bin/tcsh"
+BR="firefox" ED="gvim" FM="doublecmd" TM="terminology" SH="/bin/tcsh" \
+GL="Super_L+Left" GR="Super_L+Right"
 export rcfile="${HOME}/.$(basename "${BASH_SOURCE[0]}").rc"
 source "${rcfile}"
 
 export todofile="${HOME}/.$(basename "${BASH_SOURCE[0]}").todos"
 
+source "$(dirname "$(realpath "${BASH_SOURCE[0]}")")/MAIN"
 source "$(dirname "$(realpath "${BASH_SOURCE[0]}")")/ABOUT"
 source "$(dirname "$(realpath "${BASH_SOURCE[0]}")")/OPTS"
-source "$(dirname "$(realpath "${BASH_SOURCE[0]}")")/MAIN"
 
 case "${1}" in
     -d | --dump) echo "${MAIN}";;

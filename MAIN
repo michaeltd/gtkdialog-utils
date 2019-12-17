@@ -25,8 +25,8 @@ export MAIN='
 </menubar>
 </hbox>
 <hbox space-fill="true">
-  <button space-expand="true" can-focus="false"><input file stock="gtk-go-back"></input><action>xdotool key "Super_L+Left"</action></button>
-  <button space-expand="true" can-focus="false"><input file stock="gtk-go-forward"></input><action>xdotool key "Super_L+Right"</action></button>
+  <button space-expand="true" can-focus="false"><input file stock="gtk-go-back"></input><action>xdotool key '"${GL}"'</action></button>
+  <button space-expand="true" can-focus="false"><input file stock="gtk-go-forward"></input><action>xdotool key '"${GR}"'</action></button>
 </hbox>
 <hbox space-fill="true">
   <hscale space-expand="true" range-min="0" range-max="100" range-step="5" range-value="'${hscalevol}'" value-pos="0" digits="0" inverted="false" can-focus="false">
