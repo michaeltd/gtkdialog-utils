@@ -1,11 +1,13 @@
+export TODOFILE="${HOME}/.$(basename "${BASH_SOURCE[1]}").todos"
+
 #shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 export TODOS='
 <window title="Todos" resizable="true">
   <frame Todos>
     <vbox>
       <edit>
-        <input file>'"${todofile}"'</input>
-	    <output file>'"${todofile}"'</output>
+        <input file>'"${TODOFILE}"'</input>
+	    <output file>'"${TODOFILE}"'</output>
 		<variable export="true">TODOS</variable>
 		<action signal="show" function="refresh">TODOS</action>
       </edit>

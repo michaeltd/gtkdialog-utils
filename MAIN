@@ -1,3 +1,17 @@
+#shellcheck disable=SC2034 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
+BR="$(type -P chrome||type -P firefox||type -P firefox-esr||type -P seamonkey)" \
+  ED="$(type -P gedit||type -P kate||type -P mousepad||type -P gvim)" \
+  FM="$(type -P nautilus||type -P thunar||type -P xfe||type -P doublecmd)" \
+  TM="$(type -P gnome-terminal||type -P konsole||type -P xfce4-terminal||type -P terminology)" \
+  SH="$(type -P yash||type -P dash||type -P ksh||type -P sh)" \
+  GL="Super_L+Left" GR="Super_L+Right"
+export RCFILE="${HOME}/.$(basename "${BASH_SOURCE[1]}").rc"
+source "${RCFILE}"
+
+source ~/.bashrc.d/.stl/string.sh
+#shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
+export HSVOL="$(digits_only "$(~/bin/sndvol report 2>&1)")"
+
 #shellcheck disable=SC2016,SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 export MAIN='
 <window title="'$(basename ${BASH_SOURCE[1]})'" resizable="false">
@@ -18,7 +32,7 @@ export MAIN='
           <menuitem use-underline="true" stock="gtk-page-setup" label="Con_verters"><action>${GTKDIALOG} --center --program=CONVS &</action></menuitem>
         </menu>
         <menu label="_Help" use-underline="true" stock="gtk-help">
-          <menuitem use-underline="true" stock="gtk-preferences" label="_Preferences"><action>${GTKDIALOG} --center --program=OPTS 1> ${rcfile}</action></menuitem>
+          <menuitem use-underline="true" stock="gtk-preferences" label="_Preferences"><action>${GTKDIALOG} --center --program=OPTS 1> ${RCFILE}</action></menuitem>
           <menuitem stock-id="gtk-about" label="About"><action>${GTKDIALOG} --center --program=ABOUT &</action></menuitem>
         </menu>
       </menubar>
@@ -29,9 +43,9 @@ export MAIN='
         <button space-expand="true" can-focus="false"><input file stock="gtk-go-forward"></input><action>xdotool key '"${GR}"'</action></button>
       </hbox>
       <hbox space-fill="true">
-        <hscale space-expand="true" range-min="0" range-max="100" range-step="5" range-value="'${hscalevol}'" value-pos="0" digits="0" inverted="false" can-focus="false">
-          <variable export="true">hscalevol</variable>
-          <action>~/bin/sndvol ${hscalevol}</action>
+        <hscale space-expand="true" range-min="0" range-max="100" range-step="5" range-value="'${HSVOL}'" value-pos="0" digits="0" inverted="false" can-focus="false">
+          <variable export="true">HSVOL</variable>
+          <action>~/bin/sndvol ${HSVOL}</action>
         </hscale>
       </hbox>
       <hbox space-fill="true">
