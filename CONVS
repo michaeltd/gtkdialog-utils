@@ -1,9 +1,7 @@
 source "${HOME}/.bashrc.d/.stl/distance.bash"
-
 export -f kmtoml mltokm kphtomph mphtokph
 
 source "${HOME}/.bashrc.d/.stl/temp.bash"
-
 export -f ctof ctok ktoc ktof ftoc ftok
 
 #shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
