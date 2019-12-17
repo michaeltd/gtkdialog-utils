@@ -11,27 +11,17 @@ export MAIN='
 <vbox>
 <hbox space-fill="true">
 <menubar space-expand="true">
-  <menu label="_Application" use-underline="true">
-    <menuitem use-underline="true" label="_Browser" stock="gtk-home">
-      <action>'"${BR} &"'</action>
-    </menuitem>
-    <menuitem use-underline="true" label="_Editor" stock-id="gtk-edit">
-    <action>'"${ED} &"'</action>
-    </menuitem>
-    <menuitem use-underline="true" label="File _Manager" stock-id="gtk-directory">
-    <action>'"${FM} &"'</action>
-    </menuitem>
-    <menuitem use-underline="true" label="_Terminal" stock-id="gtk-harddisk">
-    <action>'"${TM} &"'</action>
-    </menuitem>
-    <menuitem stock-id="gtk-quit" accel-key="0x51" accel-mods="4"><action>exit:Quit</action></menuitem>
-    </menu>
-  <menu label="_Help" use-underline="true">
-    <menuitem label="Options">
-      <action>${GTKDIALOG} --center --program=OPTIONS 1> ${rcfile}</action>
-    </menuitem>
-    <menuitem stock-id="gtk-about" label="About"><action>${GTKDIALOG} --center --program=ABOUT</action></menuitem>
-  </menu>
+<menu label="_Apps" use-underline="true" stock="gtk-execute">
+<menuitem use-underline="true" label="_Browser" stock-id="gtk-home"><action>'"${BR} &"'</action></menuitem>
+<menuitem use-underline="true" label="_Editor" stock-id="gtk-edit"><action>'"${ED} &"'</action></menuitem>
+<menuitem use-underline="true" label="File _Manager" stock-id="gtk-directory"><action>'"${FM} &"'</action></menuitem>
+<menuitem use-underline="true" label="_Terminal" stock-id="gtk-harddisk"><action>'"${TM} &"'</action></menuitem>
+<menuitem stock-id="gtk-quit" accel-key="0x51" accel-mods="4"><action>exit:Quit</action></menuitem>
+</menu>
+<menu label="_Help" use-underline="true" stock="gtk-help">
+<menuitem use-underline="true" stock="gtk-preferences" label="_Preferences"><action>${GTKDIALOG} --center --program=OPTS 1> ${rcfile}</action></menuitem>
+<menuitem stock-id="gtk-about" label="About"><action>${GTKDIALOG} --center --program=ABOUT &</action></menuitem>
+</menu>
 </menubar>
 </hbox>
 <hbox space-fill="true">

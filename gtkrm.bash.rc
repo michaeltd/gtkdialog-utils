@@ -1,6 +1,0 @@
-BR="firefox"
-ED="emacsclient -c"
-FM="gentoo"
-SH="/bin/tcsh"
-TM="terminology"
-EXIT="OK"
