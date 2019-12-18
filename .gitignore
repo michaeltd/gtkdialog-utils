@@ -10,3 +10,6 @@
 !gtkdutils.bash
 !license
 !readme.md
+!lib/.keep
+!ui/*
+!bin/gtkdutils.bash

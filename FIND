@@ -1,9 +1,0 @@
-#shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
-export FIND='
-<window title="Search" resizable="true">
-  <frame Search>
-    <vbox space-expand="true" space-fill="true" homogeneous="true">
-      <button ok></button>
-    </vbox>
-  </frame>
-</window>'
