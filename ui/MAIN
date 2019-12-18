@@ -38,6 +38,7 @@ export MAIN='
         <menu label="_Help" use-underline="true" stock="gtk-help">
           <menuitem use-underline="true" stock="gtk-preferences" label="_Preferences">
             <action>${GTKDIALOG} --program=OPTS 1> ${RCFILE}</action>
+            <action>echo "'$(basename ${BASH_SOURCE[1]})' needs to restart to update settings." >&2</action>
             <action function="closewindow">MAIN</action>
           </menuitem>
           <menuitem stock-id="gtk-about" label="About"><action>launch:ABOUT</action></menuitem>

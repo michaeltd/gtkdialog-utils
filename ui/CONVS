@@ -1,9 +1,4 @@
-source "${HOME}/.bashrc.d/.stl/distance.bash"
-export -f kmtoml mltokm
-
-source "${HOME}/.bashrc.d/.stl/temp.bash"
-export -f ctof ctok ktoc ktof ftoc ftok
-
+source "$(dirname "$(realpath "${BASH_SOURCE[1]}")")/lib/functions.bash"
 #shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 export CONVS='
 <window title="Converters" resizable="true">
@@ -38,6 +33,7 @@ export CONVS='
     </frame>
     <frame Mass>
       <vbox>
+      <text><label>Soon (TM)</label></text>
       <button>
       <input file stock="gtk-ok"></input>
       <action function="closewindow">CONVS</action>
@@ -56,7 +52,6 @@ export CONVS='
           <button>
             <input file stock="gtk-go-forward"></input>
             <action function="refresh">F</action>
-            <action function="refresh">K</action>
           </button>
         </hbox>
         <hbox>
@@ -69,26 +64,13 @@ export CONVS='
           <button>
             <input file stock="gtk-go-forward"></input>
             <action function="refresh">C</action>
-            <action function="refresh">K</action>
-          </button>
-        </hbox>
-        <hbox>
-          <text label="K"></text>
-          <entry>
-            <default>0</default>
-            <variable export="true">K</variable>
-            <input>ctok ${C} 2> /dev/null</input>
-          </entry>
-          <button>
-            <input file stock="gtk-go-forward"></input>
-            <action function="refresh">C</action>
-            <action function="refresh">F</action>
           </button>
         </hbox>
       </vbox>
     </frame>
     <frame Counting Systems>
       <vbox>
+      <text><label>Soon (TM)</label></text>
       <button>
       <input file stock="gtk-ok"></input>
       <action function="closewindow">CONVS</action>
