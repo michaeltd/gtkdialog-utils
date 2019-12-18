@@ -8,9 +8,13 @@ BR="$(type -P chrome||type -P firefox||type -P firefox-esr||type -P seamonkey)" 
 export RCFILE="${HOME}/.$(basename "${BASH_SOURCE[1]}").rc"
 source "${RCFILE}"
 
-source ${HOME}/.bashrc.d/.stl/string.sh
+#source ${HOME}/.bashrc.d/.stl/string.sh
 #shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
-export HSVOL="$(digits_only "$(${HOME}/bin/sndvol report 2>&1)")"
+#currvol="$(digits_only "$(${HOME}/bin/sndvol report 2>&1)")"
+
+currvol="$(amixer sget Master)"
+currvol="${currvol/\]*}"
+currvol="${currvol/*\[}"
 
 #shellcheck disable=SC2016,SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 export MAIN='
@@ -43,9 +47,9 @@ export MAIN='
         <button space-expand="true" can-focus="false"><input file stock="gtk-go-forward"></input><action>xdotool key '"${GR}"'</action></button>
       </hbox>
       <hbox space-fill="true">
-        <hscale space-expand="true" range-min="0" range-max="100" range-step="5" range-value="'${HSVOL}'" value-pos="0" digits="0" inverted="false" can-focus="false">
+        <hscale space-expand="true" range-min="0" range-max="100" range-value="'${currvol}'" range-step="5" value-pos="0" digits="0" inverted="false" can-focus="true">
           <variable export="true">HSVOL</variable>
-          <action>~/bin/sndvol ${HSVOL} &</action>
+          <action>amixer sset Master ${HSVOL}%</action>
         </hscale>
       </hbox>
       <hbox space-fill="true">
