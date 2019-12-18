@@ -1,4 +1,4 @@
-source "$(dirname "$(realpath "${BASH_SOURCE[1]}")")/lib/functions.bash"
+source "$(dirname "$(realpath "${BASH_SOURCE[1]}")")/lib/convs.bash"
 #shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 export CONVS='
 <window title="Converters" resizable="true">

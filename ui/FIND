@@ -1,7 +1,7 @@
+# source "$(dirname "$(realpath "${BASH_SOURCE[1]}")")/lib/find.bash"
 export FIND='
 <window title="Search" resizable="true">
   <frame Search>
-    <vbox space-expand="true" space-fill="true">
       <hbox>
         <text label="for:"></text>
         <entry>
@@ -17,19 +17,24 @@ export FIND='
 		  <input file stock="gtk-open"></input>
 		  <action function="fileselect">FLDR</action>
 		</button>
-		</hbox>
-        <hbox>
-		<tree stock-id="gtk-file">
-		  <label>Filename</label>
-		  <variable>TREE</variable>
-		  <input>find ${FLDR} -name ${REGEX}</input>
-		</tree>
-        </hbox>
         <button>
-          <label>Search</label>
+          <input file stock="gtk-find"></input>
           <action function="refresh">TREE</action>
         </button>
-    </vbox>
+	  </hbox>
+      <vbox space-expand="true" space-fill="true">
+		<tree stock-id="gtk-file">
+          <label>Filename</label>
+		  <variable>TREE</variable>
+		  <input>find ${FLDR} -iname ${REGEX}</input>
+		</tree>
+      </vbox>
   </frame>
   <variable>FIND</variable>
 </window>'
+
+# <tree stock-id="gtk-file">
+#   <label>Directory|Filename|Mime|Size|Date|Permissions</label>
+#   <variable>TREE</variable>
+#   <input icon-column="0">find ${FLDR} ${REGEX}|xargs __get_details__</input>
+# </tree>
