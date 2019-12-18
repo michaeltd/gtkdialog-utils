@@ -12,7 +12,11 @@ plus some tools to get my feet wet with gtkdialog.
 
 # Screenshot
 
-<p align="center"><a href="assets/gdu.png"><img alt="gtkdutils.bash" src="assets/gdu.png"></a></p>
+<p align="center">
+  <a href="assets/gdu.png">
+    <img alt="gtkdutils.bash" src="assets/gdu.png">
+  </a>
+</p>
 
 # Requirements
 
