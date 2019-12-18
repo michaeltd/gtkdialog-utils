@@ -16,8 +16,10 @@ plus some tools to get my feet wet with gtkdialog.
 
 # Requirements
 
-1. gtkdialog (vte enabled)
+1. gtkdialog
 
-    Preferably version 0.8.3
+    Preferably vte enabled,
+
+    preferably version 0.8.3
 
 2. xdotool

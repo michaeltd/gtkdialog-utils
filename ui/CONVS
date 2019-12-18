@@ -68,7 +68,7 @@ export CONVS='
         </hbox>
       </vbox>
     </frame>
-    <frame Counting Systems>
+    <frame Arithmetic Systems>
       <vbox>
       <text><label>Soon (TM)</label></text>
       <button>
