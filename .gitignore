@@ -7,10 +7,9 @@
 !OPTS
 !TODOS
 !assets/gdu.png
-!gtkdutils.bash
+!gtkdialog-utils.bash
 !license
 !readme.md
 !bin/.keep
 !lib/.keep
 !ui/*
-!bin/gtkdutils.bash
