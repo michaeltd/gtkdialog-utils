@@ -7,7 +7,7 @@ export -f ctof ctok ktoc ktof ftoc ftok
 #shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 export CONVS='
 <window title="Converters" resizable="true">
-  <notebook tab-labels="Distance/Speed|Mass|Temperature|Counting Systems">
+  <notebook tab-labels="Distance/Speed|Mass|Temperature|Arithmetic Systems">
     <frame Distance/Speed>
       <vbox>
         <hbox>
