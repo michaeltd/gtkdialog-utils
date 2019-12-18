@@ -1,4 +1,4 @@
-# gtkdutils
+# gtkdialog-utils
 
 michaeltd <2019-10-28 Mon>
 
