@@ -1,9 +1,34 @@
-#shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 export FIND='
 <window title="Search" resizable="true">
   <frame Search>
-    <vbox space-expand="true" space-fill="true" homogeneous="true">
-      <button ok></button>
+    <vbox space-expand="true" space-fill="true">
+      <hbox>
+        <text label="for:"></text>
+        <entry>
+          <default>*.txt</default>
+          <variable export="true">REGEX</variable>
+        </entry>
+		<text label="in:"></text>
+		<entry fs-title="Select a folder" fs-action="folder">
+          <default>"'${HOME}'"</default>
+          <variable export="true">FLDR</variable>
+        </entry>
+        <button>
+		  <input file stock="gtk-open"></input>
+		  <action function="fileselect">FLDR</action>
+		</button>
+		</hbox>
+        <hbox>
+		<tree stock-id="gtk-file">
+		  <label>Filename</label>
+		  <variable>TREE</variable>
+		  <input>find ${FLDR} -name ${REGEX}</input>
+		</tree>
+        </hbox>
+        <button>
+        <label>Search</label>
+          <action function="refresh">TREE</action>
+        </button>
     </vbox>
   </frame>
 </window>'

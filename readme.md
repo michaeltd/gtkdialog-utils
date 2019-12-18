@@ -4,11 +4,11 @@ michaeltd <2019-10-28 Mon>
 
 # Description
 
-gtkdialog Utils
+Utility to handle:
 
-Utility to handle desktop switching, volume handling, application launching,
+desktop switching, volume handling, application launching,
 
-plus some nifty tools just so I can fiddle with gtkdialog.
+plus some tools to get my feet wet with gtkdialog.
 
 # Screenshot
 
@@ -18,10 +18,6 @@ plus some nifty tools just so I can fiddle with gtkdialog.
 
 1. gtkdialog (vte enabled)
 
+    Preferably version 0.8.3
+
 2. xdotool
-
-3. [sndvol](https://github.com/michaeltd/dots/blob/master/dot.files/bin/sndvol)
-   in ~/bin/sndvol
-
-4. [string.sh](https://github.com/michaeltd/dots/blob/master/dot.files/.bashrc.d/.stl/string.sh)
-   in ~/.bashrc.d/.stl/string.sh
