@@ -36,7 +36,9 @@ export CALC='
       <action function="refresh">INPUT</action>
       <label>M_R</label>
     </button>
-    <button stock-id="gtk-quit" stock-image="gtk-quit" space-expand="true" space-fill="true" use-underline="true" label="_C"></button>
+    <button stock-id="gtk-quit" stock-image="gtk-quit" space-expand="true" space-fill="true" use-underline="true" label="_C">
+      <action function="closewindow">CALC</action>
+    </button>
     </hbox>
 
     <hbox homogeneous="true">
@@ -130,4 +132,5 @@ export CALC='
     </hbox>
   </vbox>
   </frame>
+  <variable>CALC</variable>
 </window>'

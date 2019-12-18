@@ -30,14 +30,17 @@ export MAIN='
         <menuitem stock-id="gtk-quit" accel-key="0x51" accel-mods="4"><action>exit:Quit</action></menuitem>
         </menu>
         <menu label="_Tools" stock="gtk-dialog-info">
-          <menuitem use-underline="true" stock="gtk-execute" label="_Calculator"><action>${GTKDIALOG} --program=CALC &</action></menuitem>
-          <menuitem use-underline="true" stock="gtk-apply" label="To_dos"><action>${GTKDIALOG} --program=TODOS &</action></menuitem>
-          <menuitem use-underline="true" stock="gtk-find" label="_Search"><action>${GTKDIALOG} --program=FIND &</action></menuitem>
-          <menuitem use-underline="true" stock="gtk-page-setup" label="Con_verters"><action>${GTKDIALOG} --program=CONVS &</action></menuitem>
+          <menuitem use-underline="true" stock="gtk-execute" label="_Calculator"><action>launch:CALC</action></menuitem>
+          <menuitem use-underline="true" stock="gtk-apply" label="To_dos"><action>launch:TODOS</action></menuitem>
+          <menuitem use-underline="true" stock="gtk-find" label="_Search"><action>launch:FIND</action></menuitem>
+          <menuitem use-underline="true" stock="gtk-page-setup" label="Con_verters"><action>launch:CONVS</action></menuitem>
         </menu>
         <menu label="_Help" use-underline="true" stock="gtk-help">
-          <menuitem use-underline="true" stock="gtk-preferences" label="_Preferences"><action>${GTKDIALOG} --program=OPTS 1> ${RCFILE}</action></menuitem>
-          <menuitem stock-id="gtk-about" label="About"><action>${GTKDIALOG} --program=ABOUT &</action></menuitem>
+          <menuitem use-underline="true" stock="gtk-preferences" label="_Preferences">
+            <action>${GTKDIALOG} --program=OPTS 1> ${RCFILE}</action>
+            <action function="closewindow">MAIN</action>
+          </menuitem>
+          <menuitem stock-id="gtk-about" label="About"><action>launch:ABOUT</action></menuitem>
         </menu>
       </menubar>
     </hbox>
@@ -66,4 +69,5 @@ export MAIN='
       </hbox>
     </vbox>
   </vbox>
+<variable>MAIN</variable>
 </window>'

@@ -26,9 +26,10 @@ export FIND='
 		</tree>
         </hbox>
         <button>
-        <label>Search</label>
+          <label>Search</label>
           <action function="refresh">TREE</action>
         </button>
     </vbox>
   </frame>
+  <variable>FIND</variable>
 </window>'

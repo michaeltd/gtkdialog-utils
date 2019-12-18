@@ -12,8 +12,10 @@ export TODOS='
 		<action signal="show" function="refresh">TODOS</action>
       </edit>
       <hbox>
-	  <button ok></button>
-	  <button cancel></button>
+	  <button>
+        <input file stock="gtk-ok"></input>
+        <action function="closewindow">TODOS</action>
+      </button>
 	  <button image-position="0">
 		<label>"Save"</label>
 		<input file stock="gtk-save"></input>
@@ -23,4 +25,5 @@ export TODOS='
       </hbox>
     </vbox>
   </frame>
+  <variable>TODOS</variable>
 </window>'

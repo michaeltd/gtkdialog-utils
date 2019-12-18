@@ -37,7 +37,12 @@ export CONVS='
       </vbox>
     </frame>
     <frame Mass>
-      <vbox><button ok></button></vbox>
+      <vbox>
+      <button>
+      <input file stock="gtk-ok"></input>
+      <action function="closewindow">CONVS</action>
+      </button>
+      </vbox>
     </frame>
     <frame Temperature>
       <vbox>
@@ -83,7 +88,13 @@ export CONVS='
       </vbox>
     </frame>
     <frame Counting Systems>
-      <vbox><button ok></button></vbox>
+      <vbox>
+      <button>
+      <input file stock="gtk-ok"></input>
+      <action function="closewindow">CONVS</action>
+      </button>
+      </vbox>
     </frame>
   </notebook>
+  <variable>CONVS</variable>
 </window>'

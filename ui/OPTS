@@ -24,10 +24,10 @@ export OPTS='
     </hbox>
 	<hbox>
 	  <button can-default="true" has-default="true">
-		<label>OK</label>
 		<input file stock="gtk-ok"></input>
 	  </button>
 	  <button cancel></button>
 	</hbox>
   </frame>
+  <variable>OPTS</variable>
 </window>'
