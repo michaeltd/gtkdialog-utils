@@ -12,7 +12,7 @@ export OPTS='
 	    <text xalign="1"><label>Go Left:</label></text>
 	    <text xalign="1"><label>Go Right:</label></text>
 	  </vbox>
-	  <vbox homogeneous="true">
+	  <vbox homogeneous="true" space-expand="true" space-fill="true">
         <entry><default>'"${BR}"'</default><variable export="true">BR</variable></entry>
 	    <entry><default>'"${ED}"'</default><variable export="true">ED</variable></entry>
 	    <entry><default>'"${FM}"'</default><variable export="true">FM</variable></entry>
