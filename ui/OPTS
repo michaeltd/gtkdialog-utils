@@ -3,14 +3,14 @@ export OPTS='
 <window title="Options" resizable="true">
   <frame Options>
     <hbox>
-      <vbox homogeneous="true">
-        <text xalign="1"><label>Browser:</label></text>
-	    <text xalign="1"><label>Editor:</label></text>
-	    <text xalign="1"><label>File Manager:</label></text>
-	    <text xalign="1"><label>Terminal:</label></text>
-	    <text xalign="1"><label>Shell:</label></text>
-	    <text xalign="1"><label>Go Left:</label></text>
-	    <text xalign="1"><label>Go Right:</label></text>
+      <vbox homogeneous="true" space-expand="false" space-fill="false">
+        <text xalign="0"><label>Browser:</label></text>
+	    <text xalign="0"><label>Editor:</label></text>
+	    <text xalign="0"><label>File Manager:</label></text>
+	    <text xalign="0"><label>Terminal:</label></text>
+	    <text xalign="0"><label>Shell:</label></text>
+	    <text xalign="0"><label>Go Left:</label></text>
+	    <text xalign="0"><label>Go Right:</label></text>
 	  </vbox>
 	  <vbox homogeneous="true" space-expand="true" space-fill="true">
         <entry><default>'"${BR}"'</default><variable export="true">BR</variable></entry>
