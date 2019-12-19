@@ -6,7 +6,7 @@ export FIND='
       <hbox>
         <text label="for:"></text>
         <entry>
-          <default>*.txt</default>
+          <default>"*.txt"</default>
           <variable export="true">REGEX</variable>
         </entry>
 		<text label="in:"></text>
