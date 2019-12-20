@@ -5,12 +5,9 @@ BR="$(type -P chrome||type -P firefox||type -P firefox-esr||type -P seamonkey)" 
   TM="$(type -P gnome-terminal||type -P konsole||type -P xfce4-terminal||type -P terminology)" \
   SH="$(type -P yash||type -P dash||type -P ksh||type -P sh)" \
   GL="Super_L+Left" GR="Super_L+Right"
+
 export RCFILE="${HOME}/.$(basename "${BASH_SOURCE[1]}").rc"
 source "${RCFILE}"
-
-#source ${HOME}/.bashrc.d/.stl/string.sh
-#shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
-#currvol="$(digits_only "$(${HOME}/bin/sndvol report 2>&1)")"
 
 currvol="$(amixer sget Master)"
 currvol="${currvol/\]*}"

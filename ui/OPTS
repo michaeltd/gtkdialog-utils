@@ -23,6 +23,7 @@ export OPTS='
 	  </vbox>
     </hbox>
 	<hbox>
+		<text><label>restart to update changes</label></text>
 		<button ok></button>
 		<button cancel></button>
 	</hbox>
