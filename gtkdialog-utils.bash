@@ -12,9 +12,12 @@ source "$(dirname "$(realpath "${BASH_SOURCE[0]}")")/ui/OPTS"
 source "$(dirname "$(realpath "${BASH_SOURCE[0]}")")/ui/CALC"
 source "$(dirname "$(realpath "${BASH_SOURCE[0]}")")/ui/TODOS"
 source "$(dirname "$(realpath "${BASH_SOURCE[0]}")")/ui/FIND"
-source "$(dirname "$(realpath "${BASH_SOURCE[0]}")")/ui/CONVS"
+source "$(dirname "$(realpath "${BASH_SOURCE[0]}")")/ui/CONV"
 
 case "${1}" in
-    -d | --dump) echo "${MAIN} ${ABOUT} ${OPTS} ${CALC} ${TODOS} ${FIND} ${CONVS}";;
-    *) "${GTKDIALOG}" --program=MAIN --geometry='+64+64';;
+    -c|--calc) "${GTKDIALOG}" --program=CALC;;
+    -s|--search) "${GTKDIALOG}" --program=FIND;;
+    -o|--conv) "${GTKDIALOG}" --program=CONV;;
+    -d|--dump) echo "${MAIN} ${ABOUT} ${OPTS} ${CALC} ${TODOS} ${FIND} ${CONV}";;
+    *) "${GTKDIALOG}" --program=MAIN;;
 esac

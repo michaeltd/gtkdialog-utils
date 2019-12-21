@@ -7,4 +7,5 @@
 !lib/.keep
 !lib/functions.bash
 !lib/convs.bash
+!lib/conv.bash
 !ui/*

@@ -27,17 +27,17 @@ export MAIN='
         <menuitem stock-id="gtk-quit" accel-key="0x51" accel-mods="4"><action>exit:Quit</action></menuitem>
         </menu>
         <menu label="_Tools" stock="gtk-dialog-info">
-          <menuitem use-underline="true" stock="gtk-execute" label="_Calculator"><action>launch:CALC</action></menuitem>
-          <menuitem use-underline="true" stock="gtk-apply" label="To_dos"><action>launch:TODOS</action></menuitem>
-          <menuitem use-underline="true" stock="gtk-find" label="_Search"><action>launch:FIND</action></menuitem>
-          <menuitem use-underline="true" stock="gtk-page-setup" label="Con_verters"><action>launch:CONVS</action></menuitem>
+          <menuitem use-underline="true" stock="gtk-execute" label="_Calculator"><action function="launch">CALC</action></menuitem>
+          <menuitem use-underline="true" stock="gtk-apply" label="To_dos"><action function="launch">TODOS</action></menuitem>
+          <menuitem use-underline="true" stock="gtk-find" label="_Search"><action function="launch">FIND</action></menuitem>
+          <menuitem use-underline="true" stock="gtk-page-setup" label="Con_verters"><action function="launch">CONV</action></menuitem>
         </menu>
         <menu label="_Help" use-underline="true" stock="gtk-help">
           <menuitem use-underline="true" stock="gtk-preferences" label="_Preferences">
             <action>${GTKDIALOG} --program=OPTS 1> ${RCFILE} &</action>
 	    <action>echo "'$(basename ${BASH_SOURCE[1]})' needs to restart to update settings." >&2</action>
           </menuitem>
-          <menuitem stock-id="gtk-about" label="About"><action>launch:ABOUT</action></menuitem>
+          <menuitem stock-id="gtk-about" label="About"><action function="launch">ABOUT</action></menuitem>
         </menu>
       </menubar>
     </hbox>

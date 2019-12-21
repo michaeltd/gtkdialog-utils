@@ -1,6 +1,6 @@
-source "$(dirname "$(realpath "${BASH_SOURCE[1]}")")/lib/convs.bash"
+source "$(dirname "$(realpath "${BASH_SOURCE[1]}")")/lib/conv.bash"
 #shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
-export CONVS='
+export CONV='
 <window title="Converters" resizable="true">
   <notebook tab-labels="Distance/Speed|Mass|Temperature|Arithmetic Systems">
     <frame Distance/Speed>
@@ -36,7 +36,7 @@ export CONVS='
       <text><label>Soon (TM)</label></text>
       <button>
       <input file stock="gtk-ok"></input>
-      <action function="closewindow">CONVS</action>
+      <action function="closewindow">CONV</action>
       </button>
       </vbox>
     </frame>
@@ -73,10 +73,10 @@ export CONVS='
       <text><label>Soon (TM)</label></text>
       <button>
       <input file stock="gtk-ok"></input>
-      <action function="closewindow">CONVS</action>
+      <action function="closewindow">CONV</action>
       </button>
       </vbox>
     </frame>
   </notebook>
-  <variable>CONVS</variable>
+  <variable>CONV</variable>
 </window>'
