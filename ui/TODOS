@@ -5,24 +5,24 @@ export TODOS='
   <frame Todos>
     <vbox space-expand="true" space-fill="true">
       <edit>
+	<variable>TDS</variable>
+	<action signal="show">refresh:TDS</action>
         <input file>'"${TODOFILE}"'</input>
-	    <output file>'"${TODOFILE}"'</output>
-		<variable export="true">TODOS</variable>
-		<action signal="show" function="refresh">TODOS</action>
+	<output file>'"${TODOFILE}"'</output>
       </edit>
     </vbox>
     <vbox space-expand="false" space-fill="false">
-    <hbox>
-	  <button>
-        <input file stock="gtk-ok"></input>
-        <action function="closewindow">TODOS</action>
-      </button>
-	  <button image-position="0">
+    	<hbox>
+	<button>
+		<input file stock="gtk-ok"></input>
+		<action function="closewindow">TODOS</action>
+	</button>
+	<button image-position="0">
 		<label>"Save"</label>
 		<input file stock="gtk-save"></input>
 		<action>echo "Saving Todos"</action>
-		<action function="Save">TODOS</action>
-	  </button>
+		<action>save:TDS</action>
+	</button>
     </hbox>
     </vbox>
   </frame>
