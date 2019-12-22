@@ -27,3 +27,9 @@ plus some tools to get my feet wet with gtkdialog.
     preferably version 0.8.3
 
 2. xdotool
+
+# Usage
+
+gtkdialog-utils.bash [-(-h)elp]|[-(-c)alc]|[-(-s)earch]|[-(-)c(o)nv]
+
+No arguments for the main form.

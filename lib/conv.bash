@@ -19,3 +19,13 @@ ftoc() {
     echo "scale=2;(${1} - 32) * (5 / 9)"|bc -ql
 }
 export -f ctof ftoc
+
+kgtolb(){
+    # echo "scale=2;${1} * 2.20462262185"|bc -ql
+    echo "scale=2;${1} / 0.45359237"|bc -ql
+}
+
+lbtokg(){
+    echo "scale=2;${1} * 0.45359237"|bc -ql
+}
+export -f kgtolb lbtokg

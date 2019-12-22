@@ -32,13 +32,34 @@ export CONV='
       </vbox>
     </frame>
     <frame Mass>
+
       <vbox>
-      <text><label>Soon (TM)</label></text>
-      <button>
-      <input file stock="gtk-ok"></input>
-      <action function="closewindow">CONV</action>
-      </button>
+        <hbox>
+          <text label="LB"></text>
+          <entry>
+            <default>0</default>
+            <variable export="true">LB</variable>
+            <input>kgtolb ${KG} 2> /dev/null</input>
+          </entry>
+          <button>
+            <input file stock="gtk-go-forward"></input>
+            <action function="refresh">KG</action>
+          </button>
+        </hbox>
+        <hbox>
+          <text label="KG"></text>
+          <entry>
+            <default>0</default>
+            <variable export="true">KG</variable>
+            <input>lbtokg ${LB} 2> /dev/null</input>
+          </entry>
+          <button>
+            <input file stock="gtk-go-forward"></input>
+            <action function="refresh">LB</action>
+          </button>
+        </hbox>
       </vbox>
+
     </frame>
     <frame Temperature>
       <vbox>
