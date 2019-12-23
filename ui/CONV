@@ -3,6 +3,7 @@ source "$(dirname "$(realpath "${BASH_SOURCE[1]}")")/lib/conv.bash"
 export CONV='
 <window title="Converters" resizable="true">
   <notebook tab-labels="Distance/Speed|Mass|Temperature|Arithmetic Systems">
+
     <frame Distance/Speed>
       <vbox>
         <hbox>
@@ -31,8 +32,8 @@ export CONV='
         </hbox>
       </vbox>
     </frame>
-    <frame Mass>
 
+    <frame Mass>
       <vbox>
         <hbox>
           <text label="LB"></text>
@@ -59,8 +60,8 @@ export CONV='
           </button>
         </hbox>
       </vbox>
-
     </frame>
+
     <frame Temperature>
       <vbox>
         <hbox>
@@ -89,6 +90,7 @@ export CONV='
         </hbox>
       </vbox>
     </frame>
+
     <frame Arithmetic Systems>
       <vbox>
       <text><label>Soon (TM)</label></text>
