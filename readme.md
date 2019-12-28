@@ -30,6 +30,6 @@ plus some tools to get my feet wet with gtkdialog.
 
 # Usage
 
-gtkdialog-utils.bash [-(-c)alc]|[-(-s)earch]|[-o|--conv]
+gtkdialog-utils.bash [-(-c)alc]|[-(-s)earch]|[-(-t)odos]|[-o|--conv]
 
 No arguments for the main form.

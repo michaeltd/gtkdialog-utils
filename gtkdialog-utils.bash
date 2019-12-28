@@ -15,9 +15,10 @@ source "$(dirname "$(realpath "${BASH_SOURCE[0]}")")/ui/FIND"
 source "$(dirname "$(realpath "${BASH_SOURCE[0]}")")/ui/CONV"
 
 case "${1}" in
-    -h|--help) echo "Usage: $(basename "${BASH_SOURCE[0]}") [-(-c)alc]|[-(-s)earch]|[-o|--conv]" >&2;;
+    -h|--help) echo "Usage: $(basename "${BASH_SOURCE[0]}") [-(-c)alc]|[-(-s)earch]|[-(-t)odos]|[-o|--conv]" >&2;;
     -c|--calc) "${GTKDIALOG}" --program=CALC;;
     -s|--search) "${GTKDIALOG}" --program=FIND;;
+    -t|--todos) "${GTKDIALOG}" --program=TODOS;;
     -o|--conv) "${GTKDIALOG}" --program=CONV;;
     -d|--dump|--debug) echo "${MAIN} ${ABOUT} ${OPTS} ${CALC} ${TODOS} ${FIND} ${CONV}";;
     *) "${GTKDIALOG}" --program=MAIN;;
