@@ -3,6 +3,7 @@
 !gtkdialog-utils.bash
 !license
 !readme.md
+!readme.org
 !bin/.keep
 !lib/.keep
 !lib/functions.bash

@@ -1,8 +1,9 @@
-# gtkdialog-utils
+#+title: gtkdialog-utils
+#+author: michaeltd
+#+date: <2019-10-28 Mon>
+#+html: <p align="center"><a href="assets/gdu.png"><img alt="gtkdutils.bash" src="assets/gdu.png"></a></p>
 
-michaeltd <2019-10-28 Mon>
-
-# Description
+* Description
 
 Utility to handle:
 
@@ -10,15 +11,7 @@ desktop switching, volume handling, application launching,
 
 plus some tools to get my feet wet with gtkdialog.
 
-# Screenshot
-
-<p align="center">
-  <a href="assets/gdu.png">
-    <img alt="gtkdutils.bash" src="assets/gdu.png">
-  </a>
-</p>
-
-# Requirements
+* Requirements
 
 1. gtkdialog
 
@@ -28,7 +21,7 @@ plus some tools to get my feet wet with gtkdialog.
 
 2. xdotool
 
-# Usage
+* Usage
 
 gtkdialog-utils.bash [-(-c)alc]|[-(-s)earch]|[-(-t)odos]|[-o|--conv]
 
