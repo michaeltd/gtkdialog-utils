@@ -1,7 +1,7 @@
 #+title: gtkdialog-utils
 #+author: michaeltd
 #+date: <2019-10-28 Mon>
-#+html: <p align="center"><a href="assets/gdu.png"><img alt="gtkdutils.bash" src="assets/gdu.png"></a></p>
+#+html: <p align="center"><img alt="gtkdutils.bash" src="assets/gdu.png"></p>
 
 * Description
 

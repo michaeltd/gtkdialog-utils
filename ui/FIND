@@ -26,7 +26,7 @@ export FIND='
 	<vbox space-expand="true" space-fill="true">
 	    <tree stock-id="gtk-file">
                 <label>Filename</label>
-		<input selection-mode="1" exported-column="0">find ${FLDR} -iname ${REGEX}</input>
+		<input selection-mode="1" exported-column="0">find -P "${FLDR}" -iname "${REGEX}"</input>
 		<variable export="true">TREE</variable>
 		<action signal="row-activated">${ED} ${TREE}</action>
 	    </tree>
