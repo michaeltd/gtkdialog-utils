@@ -11,6 +11,7 @@ desktop switching, volume handling, application launching,
 
 plus some tools to get my feet wet with gtkdialog.
 
+
 * Requirements
 
 1. gtkdialog
@@ -20,6 +21,7 @@ plus some tools to get my feet wet with gtkdialog.
     preferably version 0.8.3
 
 2. xdotool
+
 
 * Usage
 
