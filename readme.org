@@ -2,29 +2,26 @@
 #+author: michaeltd
 #+date: <2019-10-28 Mon>
 #+html: <p align="center"><img alt="gtkdutils.bash" src="assets/gdu.png"></p>
-
 * Description
 
-Utility to handle:
+  Utility to handle:
 
-desktop switching, volume handling, application launching,
+  desktop switching, volume handling, application launching,
 
-plus some tools to get my feet wet with gtkdialog.
-
+  plus some tools to get my feet wet with gtkdialog.
 
 * Requirements
 
-1. gtkdialog
+  1. gtkdialog
 
-    Preferably vte enabled,
+     Preferably vte enabled,
 
-    preferably version 0.8.3
+     preferably version 0.8.3
 
-2. xdotool
-
+  2. xdotool
 
 * Usage
 
-gtkdialog-utils.bash [-(-c)alc]|[-(-s)earch]|[-(-t)odos]|[-o|--conv]
+  gtkdialog-utils.bash [-(-c)alc]|[-(-s)earch]|[-(-t)odos]|[-o|--conv]
 
-No arguments for the main form.
+  No arguments for the main form.
