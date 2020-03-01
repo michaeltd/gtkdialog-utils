@@ -5,17 +5,17 @@
 * Description
 
   Utility to handle:
-
+  
   desktop switching, volume handling, application launching,
-
+  
   plus some tools to get my feet wet with gtkdialog.
 
 * Requirements
 
   1. gtkdialog
-
+     
      Preferably vte enabled,
-
+     
      preferably version 0.8.3
 
   2. xdotool
@@ -23,5 +23,3 @@
 * Usage
 
   gtkdialog-utils.bash [-(-c)alc]|[-(-s)earch]|[-(-t)odos]|[-o|--conv]
-
-  No arguments for the main form.
