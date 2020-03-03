@@ -1,4 +1,3 @@
-export TODOFILE="${HOME}/.$(basename "${BASH_SOURCE[1]}").todos"
 #shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 export TODOS='
 <window title="Todos" resizable="true">
@@ -7,8 +6,8 @@ export TODOS='
       <edit>
 	<variable>TDS</variable>
 	<action signal="show">refresh:TDS</action>
-        <input file>'"${TODOFILE}"'</input>
-	<output file>'"${TODOFILE}"'</output>
+        <input file>'"${GDU_TODO}"'</input>
+	<output file>'"${GDU_TODO}"'</output>
       </edit>
     </vbox>
     <vbox space-expand="false" space-fill="false">

@@ -1,4 +1,4 @@
-source "$(dirname "$(realpath "${BASH_SOURCE[1]}")")/lib/conv.bash"
+source "${GDU_DIR_NAME}/lib/conv.bash"
 #shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 export CONV='
 <window title="Converters" resizable="true">
@@ -11,7 +11,7 @@ export CONV='
           <entry>
             <default>0</default>
             <variable export="true">ML</variable>
-            <input>kmtoml ${KM} 2> /dev/null</input>
+            <input>km2ml ${KM} 2> /dev/null</input>
           </entry>
           <button>
             <input file stock="gtk-go-forward"></input>
@@ -23,7 +23,7 @@ export CONV='
           <entry>
             <default>0</default>
             <variable export="true">KM</variable>
-            <input>mltokm ${ML} 2> /dev/null</input>
+            <input>ml2km ${ML} 2> /dev/null</input>
           </entry>
           <button>
             <input file stock="gtk-go-forward"></input>
@@ -40,7 +40,7 @@ export CONV='
           <entry>
             <default>0</default>
             <variable export="true">LB</variable>
-            <input>kgtolb ${KG} 2> /dev/null</input>
+            <input>kg2lb ${KG} 2> /dev/null</input>
           </entry>
           <button>
             <input file stock="gtk-go-forward"></input>
@@ -52,7 +52,7 @@ export CONV='
           <entry>
             <default>0</default>
             <variable export="true">KG</variable>
-            <input>lbtokg ${LB} 2> /dev/null</input>
+            <input>lb2kg ${LB} 2> /dev/null</input>
           </entry>
           <button>
             <input file stock="gtk-go-forward"></input>
@@ -69,7 +69,7 @@ export CONV='
           <entry>
             <default>0</default>
             <variable export="true">C</variable>
-            <input>ftoc ${F} 2> /dev/null</input>
+            <input>f2c ${F} 2> /dev/null</input>
           </entry>
           <button>
             <input file stock="gtk-go-forward"></input>
@@ -81,7 +81,7 @@ export CONV='
           <entry>
             <default>0</default>
             <variable export="true">F</variable>
-            <input>ctof ${C} 2> /dev/null</input>
+            <input>c2f ${C} 2> /dev/null</input>
           </entry>
           <button>
             <input file stock="gtk-go-forward"></input>

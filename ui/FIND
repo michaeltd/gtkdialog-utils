@@ -1,4 +1,4 @@
-source "${HOME}/.$(basename "${BASH_SOURCE[1]}").rc"
+source "${GDU_RC}"
 export ED
 export FIND='
 <window title="Search" resizable="true">

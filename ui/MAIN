@@ -1,13 +1,12 @@
 #shellcheck disable=SC2034 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
-BR="$(type -P chrome||type -P firefox||type -P firefox-esr||type -P seamonkey)" \
+declare BR="$(type -P chrome||type -P firefox||type -P firefox-esr||type -P seamonkey)" \
   ED="$(type -P gedit||type -P kate||type -P mousepad||type -P gvim)" \
   FM="$(type -P nautilus||type -P thunar||type -P xfe||type -P doublecmd)" \
   TM="$(type -P gnome-terminal||type -P konsole||type -P xfce4-terminal||type -P terminology)" \
   SH="$(type -P yash||type -P dash||type -P ksh||type -P sh)" \
   GL="Super_L+Left" GR="Super_L+Right"
 
-export RCFILE="${HOME}/.$(basename "${BASH_SOURCE[1]}").rc"
-source "${RCFILE}"
+source "${GDU_RC}"
 
 currvol="$(amixer sget Master)"
 currvol="${currvol/\]*}"
@@ -15,15 +14,15 @@ currvol="${currvol/*\[}"
 
 #shellcheck disable=SC2016,SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 export MAIN='
-<window title="'$(basename ${BASH_SOURCE[1]})'" resizable="true">
+<window title="'${GDU_BASE_NAME%%\.bash}'" resizable="true">
   <vbox>
     <hbox space-fill="true">
       <menubar space-expand="true">
         <menu label="_Apps" use-underline="true" stock="gtk-execute">
+        <menuitem use-underline="true" label="_Terminal" stock-id="gtk-harddisk"><action>'"${TM} &"'</action></menuitem>
         <menuitem use-underline="true" label="_Browser" stock-id="gtk-home"><action>'"${BR} &"'</action></menuitem>
         <menuitem use-underline="true" label="_Editor" stock-id="gtk-edit"><action>'"${ED} &"'</action></menuitem>
         <menuitem use-underline="true" label="File _Manager" stock-id="gtk-directory"><action>'"${FM} &"'</action></menuitem>
-        <menuitem use-underline="true" label="_Terminal" stock-id="gtk-harddisk"><action>'"${TM} &"'</action></menuitem>
         <menuitem stock-id="gtk-quit" accel-key="0x51" accel-mods="4"><action>exit:Quit</action></menuitem>
         </menu>
         <menu label="_Tools" stock="gtk-dialog-info">
@@ -34,8 +33,8 @@ export MAIN='
         </menu>
         <menu label="_Help" use-underline="true" stock="gtk-help">
           <menuitem use-underline="true" stock="gtk-preferences" label="_Preferences">
-            <action>${GTKDIALOG} --program=OPTS 1> ${RCFILE} &</action>
-	    <action>echo "'$(basename ${BASH_SOURCE[1]})' needs to restart to update settings." >&2</action>
+            <action>${GTKDIALOG} --program=OPTS 1> ${GDU_RC} &</action>
+	    <action>echo "'${GDU_BASE_NAME}' needs to restart to update settings." >&2</action>
           </menuitem>
           <menuitem stock-id="gtk-about" label="About"><action function="launch">ABOUT</action></menuitem>
         </menu>
