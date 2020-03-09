@@ -12,7 +12,7 @@ declare -rx GDU_DIR_NAME="$(dirname "$(realpath "${BASH_SOURCE[0]}")")" \
 declare -rx GDU_RC="${HOME}/.${GDU_BASE_NAME/\.bash/\.rc}" \
 	GDU_TODO="${HOME}/.${GDU_BASE_NAME/\.bash/\.todos}"
 
-for i in "${GDU_DIR_NAME}/ui/"*; do
+for i in "${GDU_DIR_NAME}/ui/"*\.src; do
     source "${i}"
 done
 
