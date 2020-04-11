@@ -133,4 +133,5 @@ export CALC='
   </vbox>
   </frame>
   <variable>CALC</variable>
-</window>'
+</window>
+'

@@ -11,7 +11,7 @@ export FIND='
 	    </entry>
 	    <text label="in:"></text>
 	    <entry fs-title="Select a folder" fs-action="folder">
-                <default>"'${HOME}'"</default>
+                <default>'"${HOME}"'</default>
 		<variable export="true">FLDR</variable>
 	    </entry>
 	    <button>

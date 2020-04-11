@@ -1,19 +1,20 @@
 #shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 export ABOUT='
 <window title="About" icon-name="gtk-about" default-width="150" default-height="80" resizable="true">
-  <frame About>
-    <vbox space-expand="true" space-fill="true">
-	  <text wrap="false" xalign="0" yalign="0" selectable="false">
-        <label>About</label>
-        <input file>'"${GDU_DIR_NAME}/readme.org"'</input>
-	  </text>
-    </vbox>
-    <vbox space-expand="false" space-fill="false">
-      <button>
-        <input file stock="gtk-ok"></input>
-        <action function="closewindow">ABOUT</action>
-      </button>
-    </vbox>
-  </frame>
-  <variable>ABOUT</variable>
-</window>'
+    <frame About>
+        <vbox space-expand="true" space-fill="true">
+	    <text wrap="false" xalign="0" yalign="0" selectable="false">
+                <label>About</label>
+		<input file>'"${GDU_DIR_NAME}"/readme.org'</input>
+	    </text>
+	</vbox>
+	<vbox space-expand="false" space-fill="false">
+	    <button>
+                <input file stock="gtk-ok"></input>
+		<action function="closewindow">ABOUT</action>
+	    </button>
+	</vbox>
+    </frame>
+    <variable>ABOUT</variable>
+</window>
+'

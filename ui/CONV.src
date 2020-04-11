@@ -1,4 +1,4 @@
-source "${GDU_DIR_NAME}/lib/conv.bash"
+source "${GDU_LIB_DIR}/conv.bash"
 #shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 export CONV='
 <window title="Converters" resizable="true">

@@ -11,19 +11,20 @@ export TODOS='
       </edit>
     </vbox>
     <vbox space-expand="false" space-fill="false">
-    	<hbox>
+      <hbox>
 	<button>
-		<input file stock="gtk-ok"></input>
-		<action function="closewindow">TODOS</action>
+	  <input file stock="gtk-ok"></input>
+	  <action function="closewindow">TODOS</action>
 	</button>
 	<button image-position="0" use-underline="true">
-		<label>_Save</label>
-		<input file stock="gtk-save"></input>
-		<action>echo "Saving Todos"</action>
-		<action>save:TDS</action>
+	  <label>_Save</label>
+	  <input file stock="gtk-save"></input>
+	  <action>echo "Saving Todos"</action>
+	  <action>save:TDS</action>
 	</button>
-    </hbox>
+      </hbox>
     </vbox>
   </frame>
   <variable>TODOS</variable>
-</window>'
+</window>
+'
