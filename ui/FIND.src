@@ -33,4 +33,5 @@ export FIND='
 	</vbox>
     </frame>
     <variable>FIND</variable>
-</window>'
+</window>
+'

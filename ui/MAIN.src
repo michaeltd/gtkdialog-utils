@@ -33,7 +33,7 @@ export MAIN='
         </menu>
         <menu label="_Help" use-underline="true" stock="gtk-help">
           <menuitem use-underline="true" stock="gtk-preferences" label="_Preferences">
-            <action>${GTKDIALOG} --program=OPTS 1> ${GDU_RC} &</action>
+            <action>${GTKDIALOG} --program=OPTS > ${GDU_RC} &</action>
 	    <action>echo "'${GDU_BASE_NAME}' needs to restart to update settings." >&2</action>
           </menuitem>
           <menuitem stock-id="gtk-about" label="About"><action function="launch">ABOUT</action></menuitem>
