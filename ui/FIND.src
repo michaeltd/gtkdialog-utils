@@ -28,7 +28,7 @@ export FIND='
                 <label>Filename</label>
 		<input selection-mode="1" exported-column="0">find -P "${FLDR}" -iname "${REGEX}"</input>
 		<variable export="true">TREE</variable>
-		<action signal="row-activated">${ED} ${TREE}</action>
+		<action signal="row-activated">xdg-open ${TREE}</action>
 	    </tree>
 	</vbox>
     </frame>

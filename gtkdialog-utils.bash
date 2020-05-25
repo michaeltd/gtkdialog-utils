@@ -23,11 +23,11 @@ for i in "${GDU_UI_DIR}/"*\.src; do
 done
 
 case "${1}" in
-    h|help|-h|--help) echo "Usage: ${GDU_BASE_NAME} [-(-c)alc]|[-(-s)earch]|[-(-t)odos]|[-o|--conv]" >&2;;
-    c|calc|-c|--calc) "${GTKDIALOG}" --program=CALC;;
-    s|search|-s|--search) "${GTKDIALOG}" --program=FIND;;
-    t|todos|-t|--todos) "${GTKDIALOG}" --program=TODOS;;
-    o|conv|-o|--conv) "${GTKDIALOG}" --program=CONV;;
-    d|debug|-d|--debug) export > /tmp/${$}.tmp && "${PAGER}" /tmp/${$}.tmp;;
+    -h|--help) echo "Usage: ${GDU_BASE_NAME} [-(-c)alc]|[-(-s)earch]|[-(-t)odos]|[-o|--conv]" >&2;;
+    -c|--calc) "${GTKDIALOG}" --program=CALC;;
+    -s|--search) "${GTKDIALOG}" --program=FIND;;
+    -t|--todos) "${GTKDIALOG}" --program=TODOS;;
+    -o|--conv) "${GTKDIALOG}" --program=CONV;;
+    -d|--debug) export > /tmp/${$}.tmp && "${PAGER}" /tmp/${$}.tmp;;
     *) "${GTKDIALOG}" --program=MAIN;;
 esac
