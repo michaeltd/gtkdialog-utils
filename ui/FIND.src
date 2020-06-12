@@ -2,36 +2,41 @@ source "${GDU_RC}"
 export ED
 export FIND='
 <window title="Search" resizable="true">
+  <vbox>
     <frame Search>
-        <hbox>
-            <text label="for:"></text>
-	    <entry>
-	        <default>"*.txt"</default>
-		<variable export="true">REGEX</variable>
-	    </entry>
-	    <text label="in:"></text>
-	    <entry fs-title="Select a folder" fs-action="folder">
-                <default>'"${HOME}"'</default>
-		<variable export="true">FLDR</variable>
-	    </entry>
-	    <button>
-	        <input file stock="gtk-open"></input>
-		<action function="fileselect">FLDR</action>
-	    </button>
-	    <button>
-	        <input file stock="gtk-find"></input>
-		<action function="refresh">TREE</action>
-	    </button>
-	</hbox>
-	<vbox space-expand="true" space-fill="true">
-	    <tree stock-id="gtk-file">
-                <label>Filename</label>
-		<input selection-mode="1" exported-column="0">find -P "${FLDR}" -iname "${REGEX}"</input>
-		<variable export="true">TREE</variable>
-		<action signal="row-activated">xdg-open ${TREE}</action>
-	    </tree>
-	</vbox>
+    <hbox>
+      <text label="for:"></text>
+      <entry>
+	<default>"*.txt"</default>
+	<variable export="true">REGEX</variable>
+      </entry>
+      <text label="in:"></text>
+      <entry fs-title="Select a folder" fs-action="folder">
+        <default>'"${HOME}"'</default>
+	<variable export="true">FLDR</variable>
+      </entry>
+      <button>
+	<input file stock="gtk-open"></input>
+	<action function="fileselect">FLDR</action>
+      </button>
+      <button>
+	<input file stock="gtk-find"></input>
+	<action function="refresh">TREE</action>
+      </button>
+    </hbox>
+    <vbox space-expand="true" space-fill="true">
+      <tree stock-id="gtk-file">
+        <label>Filename</label>
+	<input selection-mode="1" exported-column="0">find -P "${FLDR}" -iname "${REGEX}"</input>
+	<variable export="true">TREE</variable>
+	<action signal="row-activated">xdg-open ${TREE}</action>
+      </tree>
+    </vbox>
     </frame>
-    <variable>FIND</variable>
-</window>
-'
+    <button>
+      <input file stock="gtk-ok"></input>
+      <action function="closewindow">FIND</action>
+    </button>
+  </vbox>
+  <variable>FIND</variable>
+</window>'

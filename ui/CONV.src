@@ -2,8 +2,8 @@ source "${GDU_LIB_DIR}/conv.bash"
 #shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 export CONV='
 <window title="Converters" resizable="true">
+  <vbox>
   <notebook tab-labels="Distance/Speed|Mass|Temperature|Arithmetic Systems">
-
     <frame Distance/Speed>
       <vbox>
         <hbox>
@@ -32,7 +32,6 @@ export CONV='
         </hbox>
       </vbox>
     </frame>
-
     <frame Mass>
       <vbox>
         <hbox>
@@ -93,13 +92,52 @@ export CONV='
 
     <frame Arithmetic Systems>
       <vbox>
-      <text><label>Soon (TM)</label></text>
-      <button>
-      <input file stock="gtk-ok"></input>
-      <action function="closewindow">CONV</action>
-      </button>
+        <hbox>
+          <text label="BIN"></text>
+          <entry>
+            <default>0</default>
+            <variable export="true">BIN</variable>
+            <input>hex2bin ${HEX} 2> /dev/null</input>
+          </entry>
+          <button>
+            <input file stock="gtk-go-forward"></input>
+            <action function="refresh">DEC</action>
+            <action function="refresh">HEX</action>
+          </button>
+        </hbox>
+        <hbox>
+          <text label="DEC"></text>
+          <entry>
+            <default>0</default>
+            <variable export="true">DEC</variable>
+            <input>bin2dec ${BIN} 2> /dev/null</input>
+          </entry>
+          <button>
+            <input file stock="gtk-go-forward"></input>
+            <action function="refresh">HEX</action>
+            <action function="refresh">BIN</action>
+          </button>
+        </hbox>
+        <hbox>
+          <text label="HEX"></text>
+          <entry>
+            <default>0</default>
+            <variable export="true">HEX</variable>
+            <input>dec2hex ${DEC} 2> /dev/null</input>
+          </entry>
+          <button>
+            <input file stock="gtk-go-forward"></input>
+            <action function="refresh">BIN</action>
+            <action function="refresh">DEC</action>
+          </button>
+        </hbox>
       </vbox>
-    </frame>
+   </frame>
   </notebook>
+  <button>
+    <input file stock="gtk-ok"></input>
+    <action function="closewindow">CONV</action>
+  </button>
+  </vbox>
   <variable>CONV</variable>
 </window>'
