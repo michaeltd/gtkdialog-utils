@@ -22,4 +22,4 @@
 
 * Usage
 
-  gtkdialog-utils.bash [-(-c)alc]|[-(-s)earch]|[-(-t)odos]|[-o|--conv]
+  gtkdialog-utils.bash [-(-c)alc|-(-s)earch|-(-t)odos|-o|--conv]

@@ -12,13 +12,13 @@ declare -rx GDU_DIR_NAME="$(dirname "$(realpath "${BASH_SOURCE[0]}")")" \
 declare -rx GDU_UI_DIR="${GDU_DIR_NAME}/ui" \
 	GDU_LIB_DIR="${GDU_DIR_NAME}/lib"
 
-declare -rx GDU_RC="${HOME}/.${GDU_BASE_NAME/\.bash/\.rc}" \
-	GDU_TODO="${HOME}/.${GDU_BASE_NAME/\.bash/\.todos}"
+declare -rx GDU_RC="${HOME}/.${GDU_BASE_NAME/.bash/.rc}" \
+	GDU_TODO="${HOME}/.${GDU_BASE_NAME/.bash/.todos}"
 
-declare -rx TMP_DIR="/tmp/${USER}/$(basename ${BASH_SOURCE[0]/\.bash/})/${$}/"
+declare -rx TMP_DIR="/tmp/${USER}/$(basename ${BASH_SOURCE[0]/.bash/})/${$}/"
 mkdir -p "${TMP_DIR}" 
 
-for i in "${GDU_UI_DIR}/"*\.src; do
+for i in "${GDU_UI_DIR}"/*.src; do
     source "${i}"
 done
 
