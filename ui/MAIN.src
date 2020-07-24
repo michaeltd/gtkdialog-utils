@@ -12,9 +12,31 @@ currvol="$(amixer sget Master)"
 currvol="${currvol/\]*}"
 currvol="${currvol/*\[}"
 
+addons="$(gtkdialog --version|tail -n 1)"
+
+if [[ "${addons}" =~ VTE ]]; then
+    termbox='<terminal has-focus="false" argv0="'${SH}'" current-directory-uri="'${HOME}'" hscrollbar-policy="2" vscrollbar-policy="2">
+  <height>1</height>
+  <width>25</width>
+  <variable>vte0</variable>
+  <action>echo "vte0=$vte0 - Default child-exited signal"</action>
+  <action signal="child-exited">echo "vte0=$vte0 - Resetting and re-executing command"</action>
+  <action signal="child-exited">clear:vte0</action>
+  <action signal="child-exited">echo "vte0=$vte0 - New PID"</action>
+  <action signal="show">echo "vte0=$vte0 - show signal"</action>
+  </terminal>'
+else
+    termbox='<entry activates-default="true"><default>'"${TM}"'</default><variable export="true">runthis</variable></entry>
+  <button can-default="true" has-default="true" tooltip-text="can-default, has-default">
+  <input file stock="gtk-execute"></input>
+  <variable>btnDefault</variable>
+  <action>${runthis} &</action>
+  </button>'
+fi
+
 #shellcheck disable=SC2016,SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 export MAIN='
-<window title="'${GDU_BASE_NAME%%\.bash}'" resizable="true">
+<window title="'${GDU_BASE_NAME%.*}'" resizable="true">
   <vbox>
     <hbox space-fill="true">
       <menubar space-expand="true">
@@ -51,18 +73,7 @@ export MAIN='
           <action>amixer sset Master ${HSVOL}%</action>
         </hscale>
       </hbox>
-      <hbox space-fill="true">
-        <terminal has-focus="false" argv0="'${SH}'" current-directory-uri="'${HOME}'" hscrollbar-policy="2" vscrollbar-policy="2">
-          <height>1</height>
-          <width>25</width>
-	      <variable>vte0</variable>
-	      <action>echo "vte0=$vte0 - Default child-exited signal"</action>
-	      <action signal="child-exited">echo "vte0=$vte0 - Resetting and re-executing command"</action>
-	      <action signal="child-exited">clear:vte0</action>
-	      <action signal="child-exited">echo "vte0=$vte0 - New PID"</action>
-	      <action signal="show">echo "vte0=$vte0 - show signal"</action>
-	    </terminal>
-      </hbox>
+      <hbox space-fill="true">'"${termbox}"'</hbox>
     </vbox>
   </vbox>
 <variable>MAIN</variable>
