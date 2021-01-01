@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 #
-#shellcheck source=/dev/null
+##shellcheck source=/dev/null disable=SC2155
 
-#shellcheck disable=SC2155 # GO HOME SHELLCHECK, YOU'RE DRUNK!!!
 [[ -z "${GTKDIALOG}" ]] && export GTKDIALOG="$(type -P gtkdialog)"
 [[ -z "${GTKDIALOG}" ]] && echo "You need gtkdialog for this!" >&2 && exit 1
 
@@ -15,7 +14,7 @@ declare -rx GDU_UI_DIR="${GDU_DIR_NAME}/ui" \
 declare -rx GDU_RC="${HOME}/.${GDU_BASE_NAME/.bash/.rc}" \
 	GDU_TODO="${HOME}/.${GDU_BASE_NAME/.bash/.todos}"
 
-declare -rx TMP_DIR="/tmp/${USER}/$(basename ${BASH_SOURCE[0]/.bash/})/${$}/"
+declare -rx TMP_DIR="/tmp/${USER}/$(basename "${BASH_SOURCE[0]/.bash/}")/${$}/"
 mkdir -p "${TMP_DIR}" 
 
 for i in "${GDU_UI_DIR}"/*.src; do
